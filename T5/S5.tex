@@ -1,0 +1,185 @@
+  \documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem, kantlipsum}
+\usepackage{graphicx}
+\newcommand{\angstrom}{\mbox{\normalfont\AA}}
+\setlength{\parindent}{0cm} 
+
+\begin{document}
+ 
+\begin{center}
+\Large \textbf{C.Física Moderna: Solución Taller 5}\\
+\normalsize \textbf{Radiación de cuerpo negro y función de trabajo}
+\end{center}
+ 
+  
+
+\section{Radiación de cuerpo negro}
+
+
+Una bombilla incandescente de 40 W irradia debido a un filamento de tungsteno operando
+a 3300 K. Asumiendo que la bombilla irradia como un cuerpo negro, responda las siguientes preguntas:
+\begin{enumerate}
+	\item  ¿Cuáles son la frecuencia $\nu_{\text{max}}$  y la longitud de onda máxima $\lambda_{\text{max}}$  en el máximo de la distribución espectral $u(\lambda,T)$?*
+	\item  Si suponemos que $\nu_{\text{max}}$ es una buena aproximación de la frecuencia promedio de los fotones
+	emitidos por la bombilla, ¿cuántos fotones está radiando la bombilla por segundo?
+	\item  ¿Si usted está observando la bombilla a $5$ m de distancia, cuántos fotones entran a su ojo
+	por segundo? (El diámetro de su pupila es aproximadamente de 5.0 mm.)
+\end{enumerate}
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+
+1.1 Usando la ley de Wien se obtiene la longitud de onda $\lambda_{\text{max}} = 878 nm$. La frecuencia es entonces $\nu = c/\lambda$. Por lo que  $\nu_{\text{max}} = 3.42 \times 10^{14}\text{Hz}$.
+
+1.2 La energía promedio por fotón es:
+
+\begin{equation*}
+E =  h f = 2.27 \times 10^{-19} \text{J}
+\end{equation*}
+
+Dividimos la potencia entre la energía promedio para obtener el número promedio de fotones por segundo:
+
+\begin{equation*}
+\frac{P}{E} = 1.76 \times 10^{20} \text{s}^{-1}
+\end{equation*}
+
+1.3 La bombilla irradia uniformemente. Por lo que queremos saber que proporción de los fotones emitidos cae sobre el ojo. Para ello se calcula la razón entre el área del ojo y la esfera de radio 5m:
+
+\begin{align*}
+\frac{A_{\text{ojo}}}{A_{5\text{cm}}} &= \frac{\pi r^2}{4 \pi R^2} \\
+&= \frac{1}{4} \left(\frac{r}{R}\right)^2\\
+&= \frac{1}{4} \left(\frac{2.5 \times 10^{-3}}{5}\right)^2\\
+&= \frac{10^{-6}}{16}
+\end{align*}
+
+Y con esto la cantidad de fotones que llegan al ojo es:
+
+\begin{equation*}
+N = \frac{A_{\text{ojo}}}{A_{5\text{cm}}} \frac{P}{E} = 1.1 \times 10^{13} \text{s}^{-1}
+\end{equation*}
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\section{Función de trabajo}
+
+ Una superficie de potasio se ilumina con luz ultravioleta de longitud de onda $\lambda = 2500  \angstrom $.
+Si la función trabajo del potasio es $2.21$ eV, calcular la máxima rapidez que logran los
+electrones emitidos.
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+La ecuación relevante es:
+
+\begin{equation*}
+K_{\text{max}} = \frac{h c}{\lambda} - \phi
+\end{equation*}
+
+Al calcular se obtiene $K_{\text{max}} = 2.75 $ eV. Ahora usando la definición de energía cinética, obtenemos la siguiente expresión para la velocidad:
+
+
+\begin{align*}
+v_{\text{max}} &= \sqrt{\frac{2K_{\text{max}}}{m}}\\
+&= 9.84 \times 10^5 \frac{\text{m}}{\text{s}}
+\end{align*}
+
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\section{Efecto fotoeléctrico}
+
+El emisor de un tubo fotoeléctrico tiene una longitud de onda umbral $\lambda_0= 6000 \angstrom$. Calcular la longitud de onda de la luz incidente sobre el tubo si el potencial de frenado para esta luz es 2.5 V.
+
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+De acuerdo a la teoría del efecto fotoeléctrico. La longitud de onda umbral me permite
+calcular la función trabajo del material:
+
+\begin{equation*}
+K_{\text{max}} = \frac{hc}{\lambda} - \phi_0
+\end{equation*}
+
+Si $K_{\text{max}} = 0$, entonces los fotoelectrones apenas se desprenden de la superficie del metal
+y $\lambda = \lambda_0$ (Longitud de onda Umbral). Por lo tanto podemos calcular la función trabajo
+mediante:
+
+\begin{equation*}
+\phi_0 = \frac{hc}{\lambda_0} = 2.068 eV
+\end{equation*}
+
+
+Dado que el potencial de frenado es una medida de la energía cinética máxima de los foto-
+electrones, tenemos que $K_{\text{max}} = e\Delta V$ (donde $e$ es la carga de un electrón). Con esto tenemos la ecuación para la longitud de onda dada por:
+
+
+\begin{equation*}
+ e\Delta V = \frac{hc}{\lambda}- \phi_0
+\end{equation*}
+
+Despejando se obtiene:
+
+\begin{equation*}
+\lambda = \frac{hc}{e\Delta V +\phi_0} = 2716.3  \angstrom
+\end{equation*}
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+
+\begin{center}
+\textbf{Fórmulas útiles}
+\end{center}
+
+
+
+
+Ley de Wien:
+
+
+
+\begin{align*}
+\lambda_{\text{max}} T = 2.9 \times 10^{-3} \text{m} \cdot \text{K}
+\end{align*}
+
+
+Energía de un fotón con frecuencia $\nu$:
+
+
+\begin{equation*}
+E  = h \nu 
+\end{equation*}
+
+
+Función de trabajo
+
+\begin{equation*}
+K_{\text{max}} = h \nu - \phi
+\end{equation*}
+
+
+*Note que si le pidieran la frecuencia para la cuál la distribución de frecuencias $u(\nu,T)$ tiene su máximo, la respuesta cambiaría.
+\end{document}

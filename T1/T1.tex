@@ -1,0 +1,110 @@
+  \documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem, kantlipsum}
+\usepackage{graphicx}
+\setlength{\parindent}{0cm} 
+
+\begin{document}
+ 
+\begin{center}
+\Large \textbf{C.Física Moderna: Taller 1}\\
+\normalsize \textbf{Transformaciones de Lorentz, adición de velocidades, contracción del espacio y dilatación del tiempo. }
+\end{center}
+ 
+ 
+ \textbf{Para todos los ejercicios:} aproxime la rapidez de la luz a $c=3\times 10^8$ m/s.\\ 
+\noindent\rule{16.5cm}{0.4pt}\\ 
+ \textbf{1. Calentamiento}\\
+ 
+  Para este ejercicio se usa $x,t$ como las coordenadas respecto al marco $S$ y $x',t'$ a $S'$. El marco $S'$ se mueve con velocidad $v$ relativa a $S$, en la dirección del eje $x$. Los orígenes de ambos marcos coinciden en el tiempo $t = t' = 0$.\\
+ 
+ \textbf{1.1 Transformaciones de Lorentz}
+ 
+ Para este problema (solo el 1.1) tome $v = 0.6c$. Encuentre las coordenadas de los siguientes eventos para $S'$:
+ 
+ \begin{enumerate}
+ 	\item $x=4$m, $t = 0$s\\
+ 	\item $x=4$m, $t = 1$s\\
+ 	\item $x=1.8\times 10^8$m, $t = 1$s\\
+ 	\item $x=10^9$m, $t = 2$s\\
+ \end{enumerate} 
+ 
+ 
+
+\textbf{1.2 Velocidad relativa entre marcos de referencia}\\
+
+Considere un evento que ocurre en la posición $x=6\times 10^8$m, $x'=6\times 10^8$m  y $t'=4$s, ¿cuál es la \textbf{velocidad} relativa entre los marcos $S$ y $S'$? 
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+
+\textbf{2. Dilatación del tiempo}
+
+Dos eventos ocurren en el mismo lugar para $S'$ pero separados 4 segundos uno del otro. Sabiendo que en $S$ estos eventos están separados 6 segundos uno del otro, determine su separación espacial(en $S$).
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\textbf{3. Tren}\\
+
+ Un tren con longitud propia $L$  se mueve a velocidad constante con una rapidez de $c/2$ con
+ respecto al piso. Una bola se tira desde la parte trasera hacia el frente del tren, con una velocidad de $c/3$ con respecto al tren. Determine el tiempo que tarda en recorrer el tren y la distancia que cubre visto desde:
+
+ \begin{enumerate}
+	\item  El marco de referencia del tren.
+	\item  El marco de referencia del piso sobre el que se mueve el tren.
+	\item  El marco de referencia de la bola.
+	\item  Calcule el invariante “$(\Delta s)^2$ ” para cada marco de referencia. 
+	$$(\Delta s)^2 = c^2(\Delta t)^2 - (\Delta x)^2$$
+	\item  Muestre que los intervalos de tiempo en el marco de referencia de la bola y el piso están relacionados por el factor gamma relevante.
+	\item  Muestre que los tiempos en el marco del tren y el piso no están relacionados por el factor relevante $\gamma$. ¿Por qué pasa esto?
+\end{enumerate} 
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+\textbf{Fórmulas útiles}
+
+\begin{equation*}
+\gamma = \frac{1}{\sqrt{1-\beta^2}} > 1
+\end{equation*}
+
+\begin{equation}
+\beta = \frac{v}{c}
+\end{equation}
+
+\textbf{Transformaciones de Lorentz}\\
+$S'$ tiene una velocidad $v$ relativa a $S$ .
+
+\begin{align*}
+x' &= \gamma(x -vt)\\
+t' &= \gamma(t -vx/c^2)
+\end{align*}
+
+
+\begin{align*}
+x &= \gamma(x' +vt')\\
+t &= \gamma(t' +vx'/c^2)
+\end{align*}
+
+\textbf{Adición de velocidades}\\
+$u_x$ es una velocidad medida desde $S$ y $u_x'$ desde $S'$. 
+
+\begin{align*}
+u_x &= \frac{u_x'+v}{1+vu_x'/c^2}
+\end{align*}
+
+\begin{align*}
+u_x' &= \frac{u_x- v}{1-vu_x/c^2}
+\end{align*}
+
+
+\end{document}

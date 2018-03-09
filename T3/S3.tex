@@ -1,0 +1,157 @@
+  \documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem, kantlipsum}
+\usepackage{graphicx}
+\setlength{\parindent}{0cm} 
+
+\begin{document}
+ 
+\begin{center}
+\Large \textbf{C.Física Moderna: Taller 3}\\
+\normalsize \textbf{Solución}
+\end{center}
+ 
+  
+
+\section{Efecto Doppler}
+
+Desde una galaxia A se emite luz a $550\; nm$(verde). La galaxia A tiene una velocidad relativa a las galaxias B y C de $v_B$ y $v_C$ respectivamente. Sabiendo que las galaxias ven lineas de absorción  de $450\; nm$(azul) y $700\;nm$(rojo) respectivamente, calcule $v_B$ y $v_C$. Diga si se están acercando o alejando a la galaxia A.\\
+\noindent\rule{16.5cm}{0.4pt}
+\begin{center}
+	\textbf{Solución}	
+\end{center}
+
+
+Utilizando la fórmula para efecto doppler relativista se tiene:
+
+\begin{equation*}
+ \frac{\lambda_o}{\lambda_s} = \frac{\sqrt{1+\beta}}{\sqrt{1-\beta}}
+\end{equation*}
+
+Despejamos para la velocidad:
+
+\begin{equation}
+\beta = \frac{\left( \frac{\lambda_o}{\lambda_s}\right)^2-1}{1+\left( \frac{\lambda_o}{\lambda_s}\right)^2} =\frac{\lambda_o^2-\lambda_s^2}{\lambda_s^2+\lambda_o^2}
+\end{equation}
+
+
+Por lo tanto se tiene:
+
+
+\begin{align*}
+\beta_B = \frac{ 450^2-550^2}{550^2 + 450^2} =- \frac{20}{101} = -0.198 \\
+\beta_C = \frac{700^2-550^2}{550^2 + 700^2} = \frac{75}{317} = 0.237
+\end{align*}
+
+Por lo tanto la galaxia $B$ se se acerca a $A$ mientras que $C$ se aleja de ella. Note que esto se podía saber sin hacer ningún cálculo: Si la fuente se acerca al observador, la frecuencia con la que llega aumenta y por lo tanto la longitud de onda disminuye(ya que $\lambda = c/f$). 
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\section{Energía relativa}
+
+Dos partículas de masa en reposo $m_0$ se dirigen al mismo punto con velocidades $v_1 = -v_2$ relativas
+a un marco de referencia inercial. ¿Cuál es la energía total de una partícula medida desde el marco
+en reposo de la otra?\\
+\noindent\rule{16.5cm}{0.4pt}
+\begin{center}
+	\textbf{Solución}	
+\end{center}
+
+La velocidad de una partícula vista por la otra es:
+
+
+\begin{equation}
+v'= \frac{2v}{1+ (v/c)^2}
+\end{equation}
+
+Por lo que la energía es:
+
+\begin{equation}
+E' = m_0 c^2  \gamma(v') =  m_0 c^2 \frac{1+ (v/c)^2}{1- (v/c)^2}
+\end{equation}
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+
+\section{Colisión totalmente inelástica}
+
+
+ Una partícula de masa $m$ y rapidez $v$ colisiona y se queda pegada a una partícula estacionaria
+de masa $M$. ¿Cuál es la velocidad final de la partícula compuesta?\\
+\noindent\rule{16.5cm}{0.4pt}
+\begin{center}
+	\textbf{Solución}	
+\end{center}
+
+El momento y energía inicial son:
+
+\begin{align*}
+p_i &= mv\gamma(v)\\
+E_i & = mc^2\gamma(v) + Mc^2
+\end{align*}
+
+Luego de la colisión el momento y energía final son:
+
+\begin{align*}
+p_f &= M_f v_f\gamma(v_f)\\
+E_f & = M_fc^2\gamma(v_f) 
+\end{align*}
+
+Utilizando la conservación de momento y energía:
+
+\begin{align*}
+ mv\gamma(v) &= M_f v_f\gamma(v_f)\\
+ mc^2\gamma(v) + Mc^2& = M_fc^2\gamma(v_f) 
+\end{align*}
+
+Dividiendo las últimas dos igualdades:
+
+\begin{equation}
+\frac{ mv\gamma(v)}{mc^2\gamma(v) + Mc^2} = \frac{v_f}{c^2}
+\end{equation}
+
+
+Por lo que la velocidad final es:
+
+\begin{equation}
+v_f = v \frac{m\gamma(v)}{m\gamma(v) + M}
+\end{equation}
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\textbf{Fórmulas útiles}
+
+Indice $o$ es para observador y $s$ para fuente(source).
+\begin{equation*}
+\frac{f_s}{f_o} = \frac{\lambda_o}{\lambda_s} = \frac{\sqrt{1+\beta}}{\sqrt{1-\beta}}
+\end{equation*}
+
+
+\textbf{Adición de velocidades}\\
+$u_x$ es una velocidad medida desde $S$ y $u_x'$ desde $S'$. 
+
+\begin{align*}
+u_x &= \frac{u_x'+v}{1+vu_x'/c^2}
+\end{align*}
+
+\textbf{Momento y energía relativista}\\
+
+Para las siguientes formulas $m$ es la masa en reposo.
+
+\begin{align*}
+p &= m  v \gamma\\
+E &= m c^2\gamma\\
+K &=  m  c^2 (\gamma-1)\\
+E^2 &= (pc)^2 + (mc^2)^2
+\end{align*}
+
+
+\end{document}

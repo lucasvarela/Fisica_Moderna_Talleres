@@ -1,0 +1,233 @@
+  \documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem, kantlipsum}
+\usepackage{graphicx}
+\setlength{\parindent}{0cm} 
+
+\begin{document}
+ 
+\begin{center}
+\Large \textbf{C.Física Moderna: Taller 2}\\
+\normalsize \textbf{Dilatación del tiempo y adición de velocidades}
+\end{center}
+ 
+  
+
+\section{Piones}
+ Un cúmulo de mesones $\pi^+$ (piones) se desplazan hacia un tubo de evacuación en el laboratorio Fermilab, moviéndose a $\beta= 0.92$ con respecto al laboratorio.
+ 	
+ 	\begin{enumerate}
+ 		\item Calcular el factor $\gamma$ para este grupo de piones.
+ 		\item El tiempo propio de vida media $\tau_0$ de los de piones es de $2.6\times1 0^{-8}~s$. Determine el valor de la vida media de los piones medidos en el laboratorio.
+ 		\item Si el cúmulo contenía a $50000$ piones,  ¿cuántos permanecen después de que el grupo ha viajado $50~m$ dentro del tubo? (Dato: $N=N_0e^{-t'/\tau_0}$, donde $t'$ es el tiempo medido en el marco del meson.)
+ 		\item ¿Cuál sería la respuesta al inciso anterior si hacemos caso omiso de la dilatación del tiempo?
+ 	\end{enumerate}
+\noindent\rule{16.5cm}{0.4pt}
+
+\begin{center}
+	\textbf{Solución}	
+\end{center}
+
+1.1 El factor gamma es:
+
+\begin{equation}
+\gamma = (1-\beta^2)^{-1/2} = 2.55
+\end{equation}
+
+1.2 para tiempo medio medido desde el laboratorio se tiene una dilatación temporal por lo que:
+
+\begin{equation}
+\tau =\gamma \tau_0 = 6.63 \times 10^{-8} s
+\end{equation}
+
+1.3 Este problema se puede resolver de varias formas. Una forma es calcular el tiempo que tarda visto desde el laboratorio y luego transformarlo al marco de los mesones.
+
+\begin{equation}
+\Delta t = \Delta x/v 
+\end{equation}
+
+Donde $\Delta x =50m$. Ahora
+
+
+
+\begin{align}
+\Delta t' &= \gamma(\Delta t - \Delta x v/c^2)\\
+	&= \gamma \Delta x\left(\frac{1}{v} - \frac{v}{c^2}\right)\\
+	&= \gamma \frac{\Delta x}{v}\left(1-\beta^2\right)\\
+	&= \frac{\Delta x}{v \gamma}
+\end{align}
+
+Otra forma de obtener el tiempo es observando que la distancia que mide el laboratorio esta relacionada con la distancia que ve el meson por medio de una contracción espacial. Dado que lo que se mide desde el laboratorio es la distancia propia, para el meson esa distancia se contrae:
+
+\begin{equation}
+\Delta  x' = \Delta  x/\gamma
+\end{equation}
+
+El tiempo que tarda el laboratorio en "llegar hacia" los mesones:
+
+\begin{equation}
+\Delta t' =  \frac{\Delta x'}{v} = \frac{\Delta x}{v \gamma}
+\end{equation}
+
+Entonces el tiempo que pasa para el meson es:
+
+\begin{equation}
+\Delta t' = 7.1 \times 10^{-8} s
+\end{equation}
+
+Y al introducir $\Delta t'/\tau_0$ en la ley de decaimiento obtenemos que la población de mesones que sigue viva es:
+
+\begin{equation}
+N  = 3258
+\end{equation}
+
+
+1.4 Si hacemos caso omiso de la dilatación del tiempo, simplemente calculamos el tiempo que se ve en el laboratorio:
+
+
+\begin{equation}
+\Delta t = \Delta x/v = 1.81 \times 10^{-7}
+\end{equation}
+
+Y luego introducimos esto en la ley de decaimiento para obtener:
+
+\begin{equation}
+N  = 47
+\end{equation}
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\section{Gemelos}
+
+Luisa aborda una nave espacial y se aleja de la Tierra a una velocidad constante de $0.45c$ hacia una galaxia muy lejana. Un a\~no m\'as tarde seg\'un los relojes de la Tierra, su gemelo Sebastián, aborda una segunda nave espacial y la sigue a una velocidad constante de $0.95c$ en la misma dirección. 
+\begin{enumerate}
+	\item Cuando Sebastián alcanza a Luisa, ¿Cuál será la diferencia de edad?
+	\item ¿Qué gemelo será mayor?
+\end{enumerate}
+
+\noindent\rule{16.5cm}{0.4pt}
+
+\begin{center}
+	\textbf{Solución}	
+\end{center}
+
+
+1.1 Vemos que para encontrar el tiempo tenemos que resolver un problema de cinemática:
+
+\begin{align*}
+\Delta x_S = v_S \Delta t_S\\
+\Delta x_L = v_L\Delta  t_L
+\end{align*}
+
+Donde tenemos la ligadura $\Delta t_L = 1 + \Delta t_S$. Al resolver este sistema de ecuaciones para cuando se encuentran las naves ($\Delta x_S = \Delta x_L$) se obtiene:
+
+\begin{align*}
+\Delta t_L &= 1.9 \text{ años}\\
+\Delta t_S &=0.9 \text{ años}
+\end{align*}
+
+Ahora calculamos cuanto tiempo paso mientras viajaba cada uno.
+
+\begin{align*}
+\Delta  t_S'&= \gamma_S\left( \Delta  t_S -  \Delta x_S v_S/c^2\right) = 0.281  \text{ años}\\
+ \Delta t_L'&= \gamma_L\left(  \Delta t_L -  \Delta x_L v_L/c^2\right) = 1.697  \text{ años}
+\end{align*}
+
+
+Note que se obtiene el mismo resultado utilizando la fórmula $\Delta t = \gamma(\Delta t'+v\Delta x'/c^2)$, observando que el desplazamiento para Sebastián y Luisa desde sus propios marcos de referencia es cero:
+
+\begin{align*}
+\Delta t_S'&=\Delta  t_S/\gamma_S =  0.281 \text{ años}\\
+\Delta t_L'&= \Delta t_L/\gamma_L = 1.697  \text{ años} 
+\end{align*}
+ 
+
+Finalmente recordamos que para Sebastián paso un año en la tierra por lo que el tiempo que ha pasado para cada uno desde que Luisa salió hasta que se encontraron es:
+
+\begin{align}
+\Delta T_S'&= 1+0.281  \text{ años} =1.281  \text{ años}\\
+\Delta T_L'&= 1.697  \text{ años} 
+\end{align}
+
+
+1.2 Del inciso anterior vemos que para Luisa ha pasado más tiempo, por lo que ella sera mayor que su gemelo.
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\section{Naves espaciales}
+
+Usted observa que dos naves espaciales viajan en dirección opuesta con una rapidez de $0.9 c$. Determine la rapidez relativa entre las naves.\\
+
+\begin{enumerate}
+	\item Determine la rapidez relativa entre las naves.
+	\item Repita el calculo para el inciso anterior sin tener en cuenta la relatividad especial. Diga por qué la respuesta que obtiene no es aceptable para la teoría de la relatividad especial. 
+\end{enumerate}
+\noindent\rule{16.5cm}{0.4pt}
+
+\begin{center}
+	\textbf{Solución}	
+\end{center}
+
+1.1 Sea usted el marco $S$ y una de las naves el marco $S'$. El marco $S'$ se mueve con velocidad $v = 0.9c$ respecto a usted y la otra nave con velocidad $u_x = -0.9c$. La velocidad con la que ve el marco $S'$ a la nave es $u_x'$:
+
+\begin{equation}
+u_x' =\frac{u_x- v}{1-vu_x/c^2} = \frac{-1.8}{1+0.9^2} c = -0.995 c
+\end{equation}
+
+Por lo tanto la rapidez relativa entre las naves es 0.995 c. 
+
+1.2 Usando las transformaciones de Galileo:
+
+
+\begin{equation}
+u_x' = u_x - v = -1.8 c
+\end{equation}
+
+Por lo tanto la rapidez relativa entre las naves es 1.8 c. Este tipo de calculó es incompatible con la relatividad especial ya que se obtiene una velocidad mayor a la de la luz.  
+
+\noindent\rule{16.5cm}{0.4pt}
+\pagebreak
+
+\textbf{Fórmulas útiles}
+
+\begin{equation*}
+\gamma = \frac{1}{\sqrt{1-(v/c)^2}} > 1
+\end{equation*}
+ 
+\begin{equation*}
+\beta = \frac{v}{c}
+\end{equation*}
+
+ 
+
+\textbf{Transformaciones de Lorentz}\\
+
+
+
+\begin{align*}
+ x' &= \gamma\left(x - vt\right)\\
+ t' &= \gamma\left(t - xv/c^2\right)
+\end{align*}
+
+
+
+\textbf{Adición de velocidades}\\
+$u_x$ es una velocidad medida desde $S$ y $u_x'$ desde $S'$. 
+
+\begin{align*}
+u_x &= \frac{u_x'+v}{1+vu_x'/c^2}
+\end{align*}
+
+\begin{align*}
+u_x' &= \frac{u_x- v}{1-vu_x/c^2}
+\end{align*}
+
+
+\end{document}

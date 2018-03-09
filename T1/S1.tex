@@ -1,0 +1,244 @@
+  \documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[spanish]{babel}
+\usepackage[usenames, dvipsnames]{color}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem, kantlipsum}
+\usepackage{graphicx}
+\setlength{\parindent}{0cm} 
+
+\begin{document}
+ 
+ \color{ForestGreen}
+\begin{center}
+\Large \textbf{C.Física Moderna: Solución Taller 1}
+%\large \textbf{C.Física Moderna: Taller 1}
+\end{center}
+ 
+
+ \textbf{Para todos los ejercicios:} aproxime la rapidez de la luz a $c=3\times 10^8$ m/s.\\ 
+\noindent\rule{16.5cm}{0.4pt}\\ 
+ \textbf{1. Calentamiento}\\
+ 
+  Para este ejercicio se usa $x,t$ como las coordenadas respecto al marco $S$ y $x',t'$ respecto a $S'$. El marco $S'$ se mueve con velocidad $v$ relativa a $S$, en la dirección del eje $x$. Los orígenes de ambos marcos coinciden en el tiempo $t = t' = 0$.\\
+ 
+ \textbf{1.1 Transformaciones de Lorentz}
+ 
+ Para este problema (solo el 1.1) tome $v = 0.6c$. Encuentre las coordenadas de los siguientes eventos para $S'$:
+ 
+ \begin{enumerate}
+ 	\item $x=4$m, $t = 0$s\\
+ 	\item $x=4$m, $t = 1$s\\
+ 	\item $x=1.8\times 10^8$m, $t = 1$s\\
+ 	\item $x=10^9$m, $t = 2$s\\
+ \end{enumerate} 
+ 
+ 
+
+\textbf{1.2 Velocidad relativa entre marcos de referencia}\\
+
+Considere un evento que ocurre en la posición $x=6\times 10^8$m, $x'=6\times 10^8$m  y $t'=4$s. ¿Cual es la \textbf{velocidad} relativa entre los marcos $S$ y $S'$? 
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+ \color{Black}
+ 
+ \textbf{1.1 Transformaciones de Lorentz}
+ 
+ Para calcular las cantidades que se piden se hace utilizando las transformaciones de Lorentz respectivas:
+ 
+ \begin{align}
+ x' = \gamma (x-vt)\\
+ t' = \gamma \left(t- \frac{vx}{c^2}\right)
+ \end{align}
+ 
+ Reemplazando se obtiene:
+ 
+ \begin{enumerate}
+ 	\item $x'=5$m , $t'=-10^{-8}$s
+	\item $x'=-2.225\times 10^{8}$m , $t'=1.25$s
+	\item $x'=0$m , $t'=0.8$s
+ 	\item $x'=8 \times 10^8$m , $t'=0$s
+ \end{enumerate}
+
+\noindent\rule{16.5cm}{0.4pt}\\ 
+\textbf{1.2 Velocidad relativa entre marcos de referencia}\\
+
+La transformación de Lorentz para la posición es:
+
+ 
+ \begin{equation}
+ x  = \frac{x'+  c \beta  t'}{\sqrt{1-\beta^2}}
+ \end{equation}
+ 
+ Dado que $x = x'$, se obtiene una ecuación para $v$:
+ 
+ \begin{equation}
+ x'+  v  t' = \sqrt{1-(v/c)^2} x'
+ \end{equation}
+ 
+ Elevando al cuadrado ambos lados:
+ 
+ 
+  \begin{equation}
+ x'^2+ 2x'v  t' +(v  t')^2 = (1-(v/c)^2)x'^2
+ \end{equation}
+ 
+ Despejando se obtiene:
+ 
+  \begin{equation}
+ v\left( v\left( \frac{x'^2}{c^2} + t'^2\right) + 2x't'\right) = 0
+ \end{equation}
+ 
+ De donde se obtienen las dos velocidades relativas que pueden tener: $v=0$ o $v=-2.4\times 10^8$ m/s.\\ 
+ 
+ 
+ 
+ \color{ForestGreen}
+\noindent\rule{16.5cm}{0.4pt}\\
+\textbf{2. Dilatación}
+
+Dos eventos ocurren en el mismo lugar para $S'$ pero separados 4 segundos uno del otro. Sabiendo que en $S$ estos eventos están separados 6 segundos uno del otro, determine su separación espacial(en $S$).\\
+\noindent\rule{16.5cm}{0.4pt}
+\color{Black}
+
+El tiempo se dilata por lo que:
+
+\begin{equation}
+\gamma = 6/4 = 3/2
+\end{equation}
+
+Por lo que $\beta  = \sqrt{5}/3$. 
+
+Con esto podemos calcular la distancia:
+
+\begin{equation}
+x = \frac{\sqrt{5}c }{3} 6\text{s} = 1.341 \times 10^9 \text{m}  
+\end{equation}
+
+Los eventos están separados $ 1.341 \times 10^9 \text{m}$. Este problema se puede resolver aun más fácil usando el invariante $\Delta s$, inténtelo!
+\color{ForestGreen}
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\textbf{3. Tren}\\
+
+ Un tren con longitud propia $L$  se mueve a velocidad constante con una rapidez de $c/2$ con
+ respecto al piso. Una bola se tira desde la parte trasera hacia el frente del tren, con una velocidad de $c/3$ con respecto al tren. Determine el tiempo que tarda en recorrer el tren y la distancia que cubre visto desde:
+
+ \begin{enumerate}
+	\item  El marco de referencia del tren.
+	\item  El marco de referencia del piso.
+	\item  El marco de referencia de la bola.
+	\item  Calcule el invariante “$(\Delta s)^2$ ” para cada marco de referencia. 
+	$$(\Delta s)^2 = c^2(\Delta t)^2 - (\Delta x)^2$$
+	\item  Muestre que los intervalos de tiempo en el marco de referencia de la bola y el piso están relacionados por el factor gamma relevante.
+	\item  Muestre que los tiempos en el marco del tren y el piso no están relacionados por el factor relevante $\gamma$. ¿Por qué pasa esto?
+\end{enumerate} 
+\noindent\rule{16.5cm}{0.4pt}\\
+
+\color{Black}
+
+\textbf{3.1 El marco de referencia del tren.}\\
+
+
+ En el marco del tren tenemos lo siguiente:
+
+\begin{equation}
+t = \frac{L}{c/3} = 3 \frac{L}{c}
+\end{equation}
+
+\begin{equation}
+\Delta x = L 
+\end{equation}
+
+El tiempo es la distancia viajada(la cual es la longitud propia del tren) dividida por la rapidez de la bola.\\
+\noindent\rule{16.5cm}{0.4pt}\\
+\textbf{3.2 El marco de referencia del piso.}\\
+
+ Usando la transformación de Lorentz tenemos:
+ 
+ \begin{align*}
+ t &= \gamma \left( t'+ \frac{v_x x'}{c^2}\right)\\
+ x &= \gamma (x'+v_x t')
+ \end{align*}
+ 
+ En el marco del tren, $x' = L$ \& $t'  = 3L/c$.La velocidad relativa entre el piso y el tren es $v_x = c/2$, luego $\gamma = 2/ \sqrt{3}$.
+ Por lo que:
+ 
+ 
+  \begin{align*}
+ \Delta t &= \frac{7L}{\sqrt{3} c}\\
+ \Delta x &= \frac{5L}{\sqrt{3} }
+ \end{align*}
+\noindent\rule{16.5cm}{0.4pt}\\
+\textbf{3.3 El marco de referencia de la bola.}\\
+
+
+ Para el tiempo se usa la ecuación del caso anterior pero con $v_x = -c/3$ \& $\gamma = 3/ \sqrt{8}$. Luego
+ 
+ 
+\begin{equation}
+\Delta t = \sqrt{8} \frac{L}{c}
+\end{equation}
+\noindent\rule{16.5cm}{0.4pt}\\
+\textbf{3.4 Los invariantes.}\\
+
+ El intervalo invariante viene dado por la siguiente igualdad:
+
+\begin{equation}
+(\Delta s)^2 = c^2(\Delta t)^2 - (\Delta x)^2
+\end{equation}
+Usando de indice T,G,B para el tren, piso(“ground”) \& bola respectivamente:
+\begin{align}
+\Delta s_T = (3L)^2 - L^2& = 8 L^2\\
+\Delta s_G= \left(\frac{7 L}{\sqrt{3}}\right)^2 - \left(\frac{5 L}{\sqrt{3}}\right)^2& = 8 L^2\\
+\Delta s_B = (\sqrt{8}L)^2& = 8 L^2\\
+\end{align}
+
+
+
+\noindent\rule{16.5cm}{0.4pt}\\
+\textbf{3.5 Gamma Bola-Piso}\\
+
+La velocidad relativa entre el marco de la bola y el piso se calcula usando al formula de adición de velocidades:
+
+\begin{equation}
+u'= \frac{u+v}{1+ uv/c^2}
+\end{equation}
+
+Aquí  $v = c/2$ es la rapidez relativa entre el tren y el piso. $u = c/3$ es la rapidez de la bola vista desde el marco del
+tren. Entonces $u' = 5/7$ es la velocidad relativa entre la bola y el piso. El factor gamma para $u'$ es $\gamma = 7/\sqrt{24}$. Entonces se tiene:
+
+
+\begin{equation}
+\Delta t_G = \sqrt{8} \frac{7L}{\sqrt{3}c} = \frac{7L}{\sqrt{3}c} \frac{\sqrt{8}}{\sqrt{8}} = \left(\frac{\sqrt{8}L}{c}\right) \left( \frac{7}{\sqrt{24}}\right) = \Delta t_B \gamma
+\end{equation}
+\noindent\rule{16.5cm}{0.4pt}\\
+\textbf{3.6 No gamma Tren-Piso}\\
+
+El factor gamma relevante esta dado por $\gamma = 2/ \sqrt{3}$ (como ya se mostró en (ii)). Para mostrar que los tiempos
+no están relacionados por este factor tome el cociente $t_G /t_T$:
+
+\begin{equation}
+\frac{t_G}{t_T} = \frac{7}{3\sqrt{3}}\neq  \frac{2}{\sqrt{3}} = \gamma
+\end{equation}
+
+No están relacionados por el factor gamma! Esto es debido a que el factor gamma aparece solo cuando en uno de
+los dos marcos de referencia los dos eventos ocurren en el mismo lugar, como ocurre en el caso (v) que la posición
+nunca cambio.
+
+
+\color{ForestGreen}
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\end{document}

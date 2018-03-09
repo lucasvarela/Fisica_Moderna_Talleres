@@ -1,0 +1,298 @@
+  \documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem, kantlipsum}
+\usepackage{graphicx}
+\newcommand{\angstrom}{\mbox{\normalfont\AA}}
+\setlength{\parindent}{0cm} 
+
+\begin{document}
+ 
+\begin{center}
+\Large \textbf{C.Física Moderna: Solución Taller 6}\\
+\normalsize \textbf{Ley de Bragg, efecto Compton, efecto fotoeléctrico y ley de Stefan Boltzmann }
+\end{center}
+ 
+  
+
+\section{Efecto Compton: Teoría }
+
+Describa el efecto Compton. Precisamente el escenario inicial y final. Luego
+escriba las condiciones de conservación de energía y momento para el
+experimento de Compton.
+
+
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+
+En el efecto Compton se tiene inicialmente un electrón en reposo y un fotón viajando hacia el electrón. Ambos colisionan y luego el electrón obtiene energía cinética y el fotón pierde energía. Al perder energía, la longitud de onda del fotón aumenta. Es importante notar que el cambio de longitud de onda depende únicamente del ángulo de dispersión del fotón.
+Por lo tanto se tiene la siguiente energía inicial:
+
+\begin{equation*}
+E_i = m_e c^2 + \frac{h c}{\lambda_i}
+\end{equation*}
+
+Y final:
+
+\begin{equation*}
+E_f = \sqrt{(m_ec^2)^2 + (\vec{p}_e c)^2}+\frac{h c}{\lambda_f}
+\end{equation*}
+
+Para el momento se tiene:
+
+\begin{equation*}
+\vec{p}_i = \frac{h}{\lambda_i}\hat{\i}
+\end{equation*}
+
+Y el momento final es:
+\begin{equation*}
+\vec{p}_f = \left(  |\vec{p}_e| \cos \phi +\frac{h}{\lambda_i} \cos\theta\right)\hat{
+	\i} + \left(  |\vec{p}_e| \sin \phi -\frac{h}{\lambda_i} \sin\theta\right)\hat{\j} 
+\end{equation*}
+
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\section{Efecto Compton}
+
+	En un experimento particular de efecto Compton se encuentra que la
+	longitud de onda incidente $\lambda_1$ cambia en un $1.5\%$ cuando el ángulo de
+	desplazamiento es $\theta = 120^{\circ}$.
+	
+	\begin{enumerate}
+		\item  ¿Cuál es el valor de $\lambda_1$?
+		\item  ¿Cuál será la longitud
+		de onda del fotón dispersado cuando el ángulo sea de $75^{\circ}$? Asuma que la luz que incide tiene la longitud de onda calculada en el inciso anterior.
+	\end{enumerate}
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+1.1 De la ecuación de efecto Compton se puede calcular el cambio de longitud de onda:
+
+\begin{equation*}
+\lambda_2-\lambda_1 =  \frac{h}{mc}(1-\cos\theta)
+\end{equation*}
+
+El cambio porcentual de la longitud de onda nos dice que:
+
+\begin{equation*}
+\frac{\Delta \lambda}{\lambda_1} = 0.015 
+\end{equation*}
+
+Juntando ambas ecuaciones se obtiene:
+
+\begin{equation*}
+ \lambda_1 = \frac{1}{0.015}\frac{h}{mc}(1-\cos\theta) = 0.243 \text{nm}
+\end{equation*}
+
+1.2 Se despeja $\lambda_2$ de la ecuación de efecto Compton con ángulo de  $\theta = 75^{\circ}$:
+
+
+\begin{equation*}
+\lambda_2 = \lambda_1+ \frac{h}{mc}(1-\cos\theta) = 0.245 \text{nm}
+\end{equation*}
+
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\section{Distancia interplanar de una muestra cristalina}
+
+	En un experimento de difracción de rayos X ($\lambda= 0.1542$ nm) estos inciden
+	sobre una muestra cristalina y como resultado el ángulo de dispersión primario
+	es de $\theta = 19,3^{\circ}$. Determinar la distancia interplanar de la muestra cristalina.
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+Se despeja $d$ de la ley de Bragg:
+
+\begin{equation*}
+d = \frac{\lambda}{2 \sin\theta} = 0.233 \text{nm}
+\end{equation*}
+
+\noindent\rule{16.5cm}{0.4pt}
+
+\section{Difracción de segundo orden}
+
+	Un cristal difractan rayos X. El espectro de primer orden corresponde a un
+	ángulo de $6.5^{\circ}$ y la distancia entre planos es de $2.81 \times 10^{-10}$ m. Determinar la
+	longitud de onda de los rayos X y la posición del espectro de segundo orden.
+
+
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+La longitud de onda se calcula con la ley de Bragg a primer orden.
+
+\begin{equation*}
+\lambda  = 6.69 \times 10^{-11} \text{m}
+\end{equation*}
+
+La posición del espectro a segundo orden se obtiene con la ley de Bragg con $n=2$:
+
+\begin{equation*}
+\theta = \arcsin\left(\frac{2\lambda}{2d}\right) = 13.46^{\circ}
+\end{equation*}
+
+\noindent\rule{16.5cm}{0.4pt}
+
+\section{Efecto fotoélectrico}
+
+	El emisor de un tubo fotoeléctrico tiene una longitud de onda umbral $\lambda_0= 6000\angstrom$. Calcular la longitud de onda de la luz incidente sobre el tubo si el potencial de frenado para esta luz es 2.5 V.
+
+
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+De acuerdo a la teoría del efecto fotoeléctrico, la longitud de onda umbral me permite
+calcular la función trabajo del material:
+
+\begin{equation*}
+K_{\text{max}} = \frac{hc}{\lambda} - \phi_0
+\end{equation*}
+
+Ya que si $K_{\text{max}} = 0$, entonces los fotoelectrones apenas se desprenden de la superficie del metal
+y $\lambda = \lambda_0$ (Longitud de onda Umbral). Por lo tanto podemos calcular la función trabajo
+mediante:
+
+\begin{equation*}
+\phi_0 = \frac{hc}{\lambda_0} = 2.068 eV
+\end{equation*}
+
+
+Dado que el potencial de frenado es una medida de la energía cinética máxima de los foto-
+electrones, tenemos que $K_{\text{max}} = e\Delta V$ (donde $e$ es la carga de un electrón). Con esto tenemos la ecuación para la longitud de onda dada por:
+
+
+\begin{equation*}
+e\Delta V = \frac{hc}{\lambda}- \phi_0
+\end{equation*}
+
+Despejando se obtiene:
+
+\begin{equation*}
+\lambda = \frac{hc}{e\Delta V +\phi_0} = 2716.3  \angstrom
+\end{equation*}
+\noindent\rule{16.5cm}{0.4pt}
+
+
+\section{Ley de Stefan Boltzmann}
+
+	Para la radiación de cuerpo negro se tiene una radiancia espectral dada por:
+	
+	\begin{equation*}
+	u(\lambda,T) = \frac{8\pi h c \lambda^{-5}}{e^{\frac{hc}{\lambda k T}}-1}
+	\end{equation*}
+	
+	
+	\begin{itemize}
+		\item Muestre que la densidad de energía total en una cavidad de cuerpo negro es proporcional a
+		$T^4$.
+		De una expresión explicita para la constante de proporcionalidad $\alpha$:
+		\begin{equation*}
+		u(T) = \alpha T^ 4
+		\end{equation*}
+		\item Utilice la densidad de energía irradiada para obtener la ley de Stefan Boltzmann:
+		$$I = \sigma T^4$$
+		De la expresión para $\sigma$(déjela expresada, no encuentre el valor numérico). 
+	\end{itemize}
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+La densidad de energía se obtiene integrando:
+
+\begin{equation*}
+u(T) = 8\pi h c \int_{\mathbb{R}^+} \frac{\lambda^{-5}}{e^{\frac{hc}{\lambda k T}}-1} d\lambda
+\end{equation*}
+
+Para calcular se usa la sustitución $x =\frac{hc}{\lambda k T}$. Por lo que el diferencial es $dx = -\frac{hc}{\lambda^2 k T} d\lambda$. Se puede tomar con signo y luego cambiar los límites de integración o usando el valor absoluto del diferencial y manteniendo el sentido de integración se obtiene:
+
+\begin{align*}
+\int_{\mathbb{R}^+} \frac{\lambda^{-5}}{e^{\frac{hc}{\lambda k T}}-1} d\lambda &=\int_{\mathbb{R}^+} \frac{\lambda^{-5}}{e^{x}-1}\left(\frac{\lambda^2 k T}{hc}\right) dx \\
+&=\frac{k T}{hc}\int_{\mathbb{R}^+}\frac{\lambda^{-3}}{e^{x}-1}dx \\
+&=\frac{k T}{hc}\int_{\mathbb{R}^+}\frac{\left(\frac{kTx}{hc}\right)^3}{e^{x}-1}dx \\
+&=\frac{k T}{hc}\left(\frac{kT}{hc}\right)^3\int_{\mathbb{R}^+}\frac{x^3}{e^{x}-1}dx \\
+&=\left(\frac{kT}{hc}\right)^4\int_{\mathbb{R}^+}\frac{x^3}{e^{x}-1}dx 
+\end{align*} 
+
+Finalmente usando la integral dada se obtiene:
+
+
+\begin{equation*}
+u(T) = \frac{8\pi^5 k^ 4}{15 h^ 3 c^3} T^ 4
+\end{equation*}
+
+De donde se distingue la constante de proporcionalidad:
+
+\begin{equation*}
+\alpha = \frac{8\pi^5 k^ 4}{15 h^ 3 c^3} 
+\end{equation*}
+
+Ahora para la intensidad se utiliza su relación con la densidad de energía irradiada:
+
+\begin{equation*}
+I = \frac{c}{4}u
+\end{equation*}
+
+Usando la expresión de la densidad se obtiene la siguiente fórmula para la intensidad:
+\begin{equation*}
+I = \frac{2\pi^5 k^ 4}{15 h^ 3 c^2} T^ 4
+\end{equation*}
+
+Distinguimos $\sigma$ como la constante de proporcionalidad y calculamos su valor numérico:
+\begin{equation*}
+\sigma = 5.67\times 10^{-8} \frac{\text{W}}{\text{m}^2 \text{K}^4}
+\end{equation*}
+
+\noindent\rule{16.5cm}{0.4pt}
+\\
+
+\begin{center}
+\textbf{Fórmulas útiles}
+\end{center}
+
+
+
+Efecto Compton:
+
+\begin{equation*}
+\lambda_f - \lambda_i = \frac{h}{mc}(1-\cos\theta)
+\end{equation*}
+
+Ley de Bragg
+\begin{equation*}
+n \lambda = 2 d \sin\theta
+\end{equation*}
+Energía de un fotón con frecuencia $\nu$:
+
+
+\begin{equation*}
+E  = h \nu 
+\end{equation*}
+
+
+Función de trabajo
+
+\begin{equation*}
+K_{\text{max}} = h \nu - \phi
+\end{equation*}
+
+Integral útil $ \int_{0}^{\infty}\frac{x^3}{e^{x}-1}= \frac{\pi^4}{15}$.
+\end{document}

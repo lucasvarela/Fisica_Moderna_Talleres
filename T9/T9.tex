@@ -36,59 +36,87 @@
 	%\pagebreak
 \begin{center}
 	\Large \textbf{C.Física Moderna: Taller 9}\\
-	\normalsize \textbf{Longitud de onda de De-Broglie, experimento de Davisson-Germer y principio de incertidumbre}
+	\normalsize \textbf{Introducción a la ecuación de Schrödinger}
 \end{center}
 
 
 	
-\section{Electrón libre}
-	
-Un electrón tiene velocidad $v_0$ NO relativista.	Muestre que la velocidad de grupo del electrón es $v_g = v_0$.
-	
-\noindent\rule{16.5cm}{0.4pt}
-	
-\section{Electrón libre relativista}
-	
-	La relación de dispersión para un electrón libre relativista está dada por:
-	
-	\begin{equation}
-		\omega(k) = \sqrt{c^2k^2 + (m_ec^2/\hbar)^2}
-	\end{equation}
-	
-	Obtenga una expresión para la velocidad de grupo $v_g$ y de fase $v_p$. Muestre que el producto de dichas cantidades es constante. Del resultado comente que le pasa a $v_g$ si $v_p>c$.
+\section{Modelo para un átomo como un electrón en una caja}
+	Cierto átomo requiere 3 eV de energía para excitar un electrón desde el nivel fundamental
+	al primer nivel excitado. Modele el átomo como un electrón en una caja 1D y calcule el ancho
+	$L$ de la caja
 	
 \noindent\rule{16.5cm}{0.4pt}
-		
-\section{Humano Extra-dimensional}
 	
-	 Nicolas Jaar es un humano que vive en un universo donde $h = 2 \pi J\cdot s$. Él tiene una masa de 2.0 kg y inicialmente se sabe que se encuentra en una región de 1.0 m de largo. 
+\section{Problema inverso: Obtener el potencial a partir de la función de onda}
+	 En una región del espacio, una partícula tiene una función de onda dada por:
+	 
+	 \begin{equation*}
+	 \psi(x) = A \exp\left(-\frac{x^2}{2L^2}\right)
+	 \end{equation*}
+	 Y energía dada por:
+	 
+	 \begin{equation*}
+	 E =  \frac{\hbar^2}{2mL^2}
+	 \end{equation*}
+	
+	Donde $L$ representa una longitud.
 	
 	\begin{enumerate}
-		\item ¿Cuál es la mínima incertidumbre de su velocidad?
-		\item Asumiendo que la incertidumbre de su velocidad va a durar 5.0 s, determine la incertidumbre de su posición luego de ese tiempo.
+		\item  Calcule la energía potencial como una función de $x$.
+		\item  Esboce un gráfico de $V(x)$ vs $x$. 
 	\end{enumerate}
 
 \noindent\rule{16.5cm}{0.4pt}
 
-\section{Detectores gamma}
-	
-	Un núcleo excitado con una vida media de 0.1 ns emite un rayo $\gamma$ con energía de 2.00 MeV. Si los mejores detectores gamma pueden medir energías de $\pm $ 5 eV, ¿pueden estos detectores medir el ancho de energía ($\Delta E$) para dicha emisión?
-	
-\noindent\rule{16.5cm}{0.4pt}
-	
-
-\section{Grosor natural de las lineas espectrales}
-
-Las lineas de un espectro tienen un grosor. Este grosor en varios casos es causado por el efecto doppler. Sin embargo existe también un grosor asociado a que las transiciones ocurren en un tiempo finito, lo cual da una incertidumbre intrínseca. Para transiciones atómicas la vida media para que ocurra una transición es $\tau = 10^{-8}s$.
+\section{Electrón en un pozo cuadrado infinito 1D}
+ Un electrón que se mueve en un pozo cuadrado infinito unidimensional está atrapado en el
+estado $n = 5$.
 
 \begin{enumerate}
-	\item Calcule la incertidumbre de energía para una transición. 
-	\item La incertidumbre de la longitud de onda $\Delta \lambda$ de una transición de un estado excitado $E$ al fundamental $E_1$ es:
-	$$ \frac{\Delta \lambda}{\lambda} \approx \frac{\Delta E}{E-E_1}$$
-	Calculela para la transición 2$\rightarrow$1 del átomo de hidrógeno.
+	\item  Calcule la probabilidad de encontrar el electrón entre $x = 0.2L$ y $x = 0.4L$.
+	\item Calcule la probabilidad de hallar el electrón dentro de un ancho $\Delta x = L/100$ en $x = L/2$. Es decir calcule la probabilidad de encontrar el electrón en el intervalo  $(x-\frac{\Delta x}{2},x+\frac{\Delta x}{2})$
+	\end{enumerate}
+
+\noindent\rule{16.5cm}{0.4pt}
+
+\section{Electrón en un potencial constante}
+
+Se tiene una partícula de masa $m$ en una región donde la energía potencial es una constante $V_0 < E$.
+
+\begin{enumerate}
+	\item  Demuestre que una solución de la ecuación de Schrödinger
+	independiente del tiempo para esa partícula esta dada por:
+	\begin{equation*}
+	\psi(x) = Ae^{ikx}
+	\end{equation*}
+	\item Encuentre una expresión para $k$.
+	\item Calcule la longitud de onda de DeBroglie para el electrón.
 \end{enumerate}
 
 
+\noindent\rule{16.5cm}{0.4pt}
+\pagebreak
+\begin{center}
+	\textbf{Fórmulas útiles}
+\end{center}
 
-	
+Las energías permitidas en una caja (pozo de potencial infinito) son
+\begin{equation*}
+E_n = \frac{n^2 \pi^2 \hbar^2}{2mL^2}
+\end{equation*}
+
+Ecuación de Schrödinger:
+
+\begin{equation*}
+\left(-\frac{\hbar^2}{2m} \frac{d^2}{dx^2}   + V\right) \psi(x) = E \psi(x) 
+\end{equation*}
+
+
+Las funciones de onda para los estados posibles en un pozo de potencial infinito 1D	 son:
+
+\begin{equation*}
+\psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n \pi x}{L}\right)
+\end{equation*}
+
 \end{document}

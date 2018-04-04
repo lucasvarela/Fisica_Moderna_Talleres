@@ -42,153 +42,151 @@
 	
 	\begin{center}
 		\textsc{\LARGE Física Moderna}\\[0.2cm]
-		\textsc{\LARGE  Solución Taller Semana 10  }\\[0.2cm]
+		\textsc{\LARGE  Solución Taller 9  }\\[0.2cm]
 	\end{center}
 	
 
 	
-	\section{Electrón libre}
-	
-	Un electrón tiene velocidad $v_0$ NO relativista.	Muestre que la velocidad de grupo del electrón es $v_g = v_0$.
-	
-	\color{black}
-			\begin{center}
-		\textbf{Solución}
-	\end{center}
-	La energía de un electrón libre no relativista es:
-	
-	\begin{equation*}
-	E = \frac{(\hbar k)^2}{2m_e}  
-	\end{equation*}
-	
-	Donde $p = \hbar k$. También tenemos que $E= \omega \hbar$. Luego:
-	
-	\begin{equation*}
-	\omega = \frac{\hbar}{2m_e} k^2
-	\end{equation*}
-	
-	Utilizando $v_g = d \omega /dk$:
-	
-	\begin{equation*}
-	v_g =  \frac{\hbar k}{m_e} = \frac{p}{m_e}
-	\end{equation*}
-	
-	Notamos que $p/m_e = v = v_0$ (es un electrón libre por lo que su velocidad no cambia).
-	
-\noindent\rule{16.5cm}{0.4pt}	
-\section{Electrón libre relativista}
-	
-	La relación de dispersión para un electrón libre relativista está dada por:
-	
-	\begin{equation}
-		\omega(k) = \sqrt{c^2k^2 + (m_ec^2/\hbar)^2}
-	\end{equation}
-	
-	Obtenga una expresión para la velocidad de grupo $v_g$ y de fase $v_p$. Muestre que el producto de dichas cantidades es constante. Del resultado comente que le pasa a $v_g$ si $v_p>c$.
-	
-	
-		\color{black}
-			\begin{center}
-		\textbf{Solución}
-	\end{center}
-	
-La velocidad de grupo es:
 
-\begin{equation*}
-v_g = \frac{d \omega}{d k } = \frac{k c^2}{\sqrt{k^2 c^2 + (m_e c^2/ \hbar)^2}}
-\end{equation*}		
 
-Y la velocidad de fase es:
+\section{Modelo para un átomo como un electrón en una caja}
+Cierto átomo requiere 3 eV de energía para excitar un electrón desde el nivel fundamental
+al primer nivel excitado. Modele el átomo como un electrón en una caja 1D y calcule el ancho
+$L$ de la caja
 
-\begin{equation*}
-v_p = \frac{\omega}{k} = \frac{\sqrt{c^2k^2 + (m_ec^2/\hbar)^2}}{k}
-\end{equation*}		
 
-Es fácil ver que $v_g v_p = c^2$. Por lo tanto si $v_p > c$ entonces $v_g < c$.
-
-	\noindent\rule{16.5cm}{0.4pt}
-\section{Humano Extra-dimensional}
-
-Nicolas Jaar es un humano que vive en un universo donde $h = 2 \pi J\cdot s$. Él tiene una masa de 2.0 kg y inicialmente se sabe que se encuentra en una región de 1.0 m de largo. 
-
-\begin{enumerate}
-	\item ¿Cuál es la mínima incertidumbre de su velocidad?
-	\item Asumiendo que la incertidumbre de su velocidad va a durar 5.0 s, determine la incertidumbre de su posición luego de ese tiempo.
-\end{enumerate}
-	
-		\color{black}
-		\begin{center}
-			\textbf{Solución}
-		\end{center}
-	
-	1. Tenemos que $\Delta p = m \Delta v$ por lo que:
-	
-	\begin{equation*}
-	\Delta x \Delta p  =m  \Delta x \Delta v \geq \frac{\hbar}{2}
-	\end{equation*}
-	
-	Despejando obtenemos:
-	
-	\begin{equation*}
-	\Delta v \geq \frac{h}{4 \pi m \Delta x} = 0.25 \text{m/s}
-	\end{equation*}
-	
-	2. El humano se podría mover $\Delta v / t = (0.25 \text{m/s}) / (5 \text{s}) = 1.25 \text{m}$ más. Por lo que su incertidumbre en la posición se convierte en:
-	
-	\begin{equation*}
-	\Delta x = \Delta x_ 0 + \Delta v /t = 2.25 \text{m}
-	\end{equation*}   
-	
-	\noindent\rule{16.5cm}{0.4pt}
-	\section{Detectores gamma}
-	
-	Un núcleo excitado con una vida media de 0.1 ns emite un rayo $\gamma$ con energía de 2.00 MeV. Si los mejores detectores gamma pueden medir energías de $\pm $ 5 eV, ¿pueden estos detectores medir el ancho de energía ($\Delta E$) para dicha emisión?
-	
-	
-		\color{black}
-		
-		\begin{center}
+\begin{center}
 	\textbf{Solución}
 \end{center}
-	
-	Calculamos el ancho de energía con la relación de incertidumbre para energía:
-	
-	\begin{equation*}
-	\Delta E \geq \frac{\hbar}{2 \Delta t} = 3.29 \times 10^{-6} \text{eV}
-	\end{equation*}
-	
-	El ancho entonces es mucho menor a la resolución de los detectores, por lo cual es imposible medirlo con ellos directamente.
-	
-	
-	
+
+Se calcula la diferencia de energía entre el primer y segundo nivel de energía:
+
+\begin{equation}
+\Delta E = E_2- E_1 = (4-1)\frac{ \pi^2 \hbar^2}{2mL^2} 
+\end{equation}
+
+Se desepeja $L$:
+
+\begin{equation*}
+L = \sqrt{\frac{ 3\pi^2 \hbar^2}{2m\Delta E}} = 6.14 \AA
+\end{equation*}
+
+
 \noindent\rule{16.5cm}{0.4pt}
 
+\section{Problema inverso: Obtener el potencial a partir de la función de onda}
+En una región del espacio, una partícula tiene una función de onda dada por:
 
-\section{Grosor natural de las lineas espectrales}
+\begin{equation*}
+\psi(x) = A \exp\left(-\frac{x^2}{2L^2}\right)
+\end{equation*}
+Y energía dada por:
 
-Las lineas de un espectro tienen un grosor. Este grosor en varios casos es causado por el efecto doppler. Sin embargo existe también un grosor asociado a que las transiciones ocurren en un tiempo finito, lo cual da una incertidumbre intrínseca. Para transiciones atómicas la vida media para que ocurra una transición es $\tau = 10^{-8}s$.
+\begin{equation*}
+E =  \frac{\hbar^2}{2mL^2}
+\end{equation*}
+
+Donde $L$ representa una longitud.
 
 \begin{enumerate}
-	\item Calcule la incertidumbre de energía para una transición. 
-	\item La incertidumbre de la longitud de onda $\Delta \lambda$ de una transición de un estado excitado $E$ al fundamental $E_1$ es:
-	$$ \frac{\Delta \lambda}{\lambda} \approx \frac{\Delta E}{E-E_1}$$
-	Calculela para la transición 2$\rightarrow$1 del átomo de hidrógeno.
+	\item  Calcule la energía potencial como una función de $x$.
+	\item  Esboce un gráfico de $V(x)$ vs $x$. 
 \end{enumerate}
 
-			\begin{center}
-		\textbf{Solución}
-	\end{center}
+\begin{center}
+	\textbf{Solución}
+\end{center}
 
-1. Usando el principio de incertidumbre:
-
-\begin{equation*}
-\Delta E \geq \frac{h}{\tau} = 10^{-7} \text{eV}
-\end{equation*}
-
-2. Reemplazando los valores para un átomo de hidrógeno en la transición 2 a 1:
+2.1 Se despeja de la ecuación de Schrodinger el potencial:
 
 \begin{equation*}
-\Delta \lambda = 1.19 \times 10^{-15}\text{ m} = 1.19 \text{ pm}
+V(x) = E + \frac{\hbar^2}{2m \psi(x)} \frac{d^2\psi(x)}{dx^2}
 \end{equation*}
+
+Al calcular la derivada y reemplazar el valor de la energía se obtiene:
+
+\begin{equation*}
+V(x) = \frac{\hbar^2 x^2}{2m L^4}
+\end{equation*}
+
+2.2 La gráfica es una parábola con concavidad positiva.
+
+\noindent\rule{16.5cm}{0.4pt}
+
+\section{Electrón en un pozo cuadrado infinito 1D}
+Un electrón que se mueve en un pozo cuadrado infinito unidimensional está atrapado en el
+estado $n = 5$.
+
+\begin{enumerate}
+	\item  Calcule la probabilidad de encontrar el electrón entre $x = 0.2L$ y $x = 0.4L$.
+	\item Calcule la probabilidad de hallar el electrón dentro de un ancho $\Delta x = L/100$ en $x = L/2$. Es decir calcule la probabilidad de encontrar el electrón en el intervalo  $(x-\frac{\Delta x}{2},x+\frac{\Delta x}{2})$
+\end{enumerate}
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+3.1  La probabilidad se calcula haciendo la siguiente integral:
+
+\begin{equation*}
+P(0.2L<x<0.4L) = \int_{0.2L}^{0.4L} |\psi_5(x)|^2 dx = 0.2
+\end{equation*}
+
+3.2 Se repite la integral anterior pero con limites distintos:
+
+\begin{equation*}
+P(0.01L-\frac{\Delta x}{2}<x<0.01L+\frac{\Delta x}{2}) = \int_{0.01L-\frac{\Delta x}{2}}^{0.01L+\frac{\Delta x}{2}} |\psi_5(x)|^2 dx = 0.01 + \frac{1}{5\pi} \sin(0.05\pi) \approx 0.02
+\end{equation*}
+
+
+
+\noindent\rule{16.5cm}{0.4pt}
+
+\section{Electrón en un potencial constante}
+
+Se tiene una partícula de masa $m$ en una región donde la energía potencial es una constante $V_0 < E$.
+
+\begin{enumerate}
+	\item  Demuestre que una solución de la ecuación de Schrödinger
+	independiente del tiempo para esa partícula esta dada por:
+	\begin{equation*}
+	\psi(x) = Ae^{ikx}
+	\end{equation*}
+	\item Encuentre una expresión para $k$.
+	\item Calcule la longitud de onda de DeBroglie para el electrón.
+\end{enumerate}
+
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+4.1 Se calcula la segunda derivada:
+
+\begin{equation*}
+\frac{d^2\psi(x)}{dx^2} =  - k^2 \psi(x)
+\end{equation*}
+
+Reemplazando en la ecuación de Schrodinger vemos que si se cumple la siguiente igualdad, $\phi$ es solución:
+
+\begin{equation*}
+\frac{\hbar^2 k^2}{2m} + V_0 = E
+\end{equation*}
+
+Note que $\hbar^2 k^2/(2m)$ hace el papel de energía cinética y por lo tanto $\hbar k$ de momento.\\ 
+
+4.2 De la igualdad despejamos $k$:
+
+\begin{equation*}
+k = \frac{1}{\hbar} \sqrt{2m (E-V_0)}
+\end{equation*}
+
+4.3 El número de onda lo podemos asociar con una longitud de onda:
+
+\begin{equation*}
+\lambda = \frac{2 \pi}{k} = \frac{h}{\sqrt{2m (E-V_0)}}
+\end{equation*}
+
+\noindent\rule{16.5cm}{0.4pt}
 	
 \end{document}

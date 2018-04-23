@@ -1,0 +1,195 @@
+\documentclass{article}
+\usepackage{braket}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{calligra}
+\usepackage{algpseudocode} 
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scripty}[1]{\ensuremath{\mathcalligra{#1}}}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\textwidth}{490pt}
+\setlength{\topmargin}{-40pt}
+\addtolength{\hoffset}{-0.3cm}
+\addtolength{\textheight}{4cm}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\setlength{\parindent}{0cm}
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale = 0.42]{lcaoderecha}
+%	\caption{Eletrón ligado solo al núcleo derecho}
+%	\label{fig1}
+%	\end{figure}
+
+
+
+
+\begin{document}
+	%\tableofcontents
+	%\pagebreak
+\begin{center}
+	\Large \textbf{C.Física Moderna: Solución Taller 11}\\
+	\normalsize \textbf{Átomo de Hidrógeno}
+\end{center}
+
+\section{Ecuación de Schr\"{o}dinger vs modelo de Bohr}
+
+
+Una de las funciones posibles para el estado $2p$ ($n=2$, $\ell=1$) del átomo de hidrógeno es:
+
+\begin{equation*}
+\psi_{210}=\frac{Are^{-\frac{r}{2a_0}}}{a_o}\cos\theta
+\end{equation*}
+
+Calcular para ese estado:
+\begin{enumerate}
+	\item La constante de normalización $A$ en términos de $a_0$.
+	\item El valor esperado $\braket{r}$ en términos de $a_0$. 
+	\item La incertidumbre $\Delta r$ en la posición del electrón en términos de $a_0$.
+	$$\Delta r=\sqrt{\langle r^2 \rangle - \langle r \rangle^2} $$
+	\item De acuerdo a la teoría  de Bohr, el valor de los radios de las órbitas permitidas viene dada por $r_n=n^2a_0$, siendo $n$ el número cuántico y $a_0$ el radio del estado base. ¿El radio para $n=2$ se encuentra dentro del intervalo establecido por el valor esperado y la incertidumbre (el intervalo $[\braket{r}-\Delta r,\braket{r}+\Delta r]$)?
+\end{enumerate}
+
+\textbf{Ayuda: }$\int_0^\infty x^n e^{-ax}~dx=n!/a^{n+1}$
+
+\begin{center}
+	\textbf{\large \textbf{Soluci\'on}}	
+\end{center}
+Usamos la condici\'on de normalizaci\'on para calcular el valor de la constante $A$.
+
+\begin{eqnarray}
+1&=&\int_0^{2\pi}\int_0^{\pi}\int_0^\infty\Psi^*\Psi r^2 dr \sin\theta d\theta d\phi=\int_0^{2\pi}\int_0^{\pi}\int _0^\infty \left(\frac{Are^{-\frac{r}{2a_0}}}{a_0}\cos\theta\right)^2	 r^2 dr \sin\theta d\theta d\phi \nonumber \\
+1&=&\frac{A^2}{a_0^2}\left[\int\limits_0^{2\pi} d\phi\int\limits_0^\pi \cos^2\theta \sin\theta d\theta \int\limits_0^\infty r^4 e^{-\frac{r}{a_0}}dr\right]=\frac{2\pi A^2}{a_0^2}\left[\int\limits_0^\pi \cos^2\theta \sin\theta d\theta \int\limits_0^\infty r^4 e^{-\frac{r}{a_0}}dr\right] \nonumber \\
+1&=&\frac{2\pi A^2}{a_0^2}\left[\left.-\frac{\cos^3\theta}{3}\right|_0^\pi  \int\limits_0^\infty r^4 e^{-\frac{r}{a_0}}dr\right]=\frac{4\pi A^2}{3a_0^2}\int\limits_0^\infty r^4 e^{-\frac{r}{a_0}}dr=\frac{4\pi A^2}{3a_0^2}\left(\frac{4!}{\left(\frac{1}{a_0}\right)^5}\right) \nonumber \\
+1&=&\frac{4\pi A^2}{3a_0^2}\left(24a_0^5\right) \quad \rightarrow \quad 1=32\pi A^2 a_0^3 \quad \rightarrow \quad A=\frac{1}{\sqrt{32\pi}a_0^{\frac{3}{2}}} \nonumber 
+\end{eqnarray}
+Por lo tanto la funci\'on de onda es:
+
+\begin{eqnarray}
+\Psi_{210}=\frac{1}{\sqrt{32\pi}a_0^{\frac{5}{2}}}re^{-\frac{r}{2a_0}}\cos\theta	\nonumber 
+\end{eqnarray}
+
+
+Para calcular el valor esperado de la posici\'on $\langle r \rangle$, usamos:
+
+\begin{eqnarray}
+\langle r \rangle&=&\int_0^{2\pi}\int_0^{\pi}\int_0^\infty\left(\frac{1}{\sqrt{32\pi}a_0^{\frac{5}{2}}}re^{-\frac{r}{2a_0}}\cos\theta\right)r\left(\frac{1}{\sqrt{32\pi}a_0^{\frac{5}{2}}}re^{-\frac{r}{2a_0}}\cos\theta\right) r^2 dr \sin\theta d\theta d\phi	\nonumber \\
+\langle r \rangle&=&\frac{1}{32\pi a_0^{5}}\left[\int_0^{2\pi}d\phi\int_0^{\pi} \cos^2\theta \sin\theta d\theta \int_0^\infty r^5 e^{-\frac{r}{a_0}}dr \right] \nonumber \\
+\langle r \rangle&=&\frac{1}{16 a_0^{5}}\left[\left.-\frac{\cos^3\theta}{3}\right|_0^\pi \left(\frac{5!}{\frac{1}{a_0^6}}\right)\right]=\frac{1}{16 a_0^{5}}\left(\frac{2}{3}\right)\left(120a_0^6\right)=5a_0 \nonumber 
+\end{eqnarray}
+Para calcular la incertidumbre $\Delta r$, se necesita el valor esperado de $\langle r^2 \rangle$, veamos:
+
+\begin{eqnarray}
+\langle r^2 \rangle&=&\int_0^{2\pi}\int_0^{\pi}\int_0^\infty\left(\frac{1}{\sqrt{32\pi}a_0^{\frac{5}{2}}}re^{-\frac{r}{2a_0}}\cos\theta\right)r^2\left(\frac{1}{\sqrt{32\pi}a_0^{\frac{5}{2}}}re^{-\frac{r}{2a_0}}\cos\theta\right) r^2 dr \sin\theta d\theta d\phi	\nonumber \\
+\langle r^2 \rangle&=&\frac{1}{32\pi a_0^{5}}\left[\int_0^{2\pi}d\phi\int_0^{\pi} \cos^2\theta \sin\theta d\theta \int_0^\infty r^6 e^{-\frac{r}{a_0}}dr \right] \nonumber \\
+\langle r^2 \rangle&=&\frac{1}{16 a_0^{5}}\left[\left.-\frac{\cos^3\theta}{3}\right|_0^\pi \left(\frac{6!}{\frac{1}{a_0^7}}\right)\right]=\frac{1}{16 a_0^{5}}\left(\frac{2}{3}\right)\left(720a_0^7\right)=30a_0^2 \nonumber \\
+\Delta r&=&\sqrt{\langle r^2 \rangle-\langle r \rangle^2}=\sqrt{30a_0^2-(5a_0)^2}=\sqrt{5a_0^2}=\sqrt{5}a_0 \nonumber 
+\end{eqnarray}
+Usando la teoría de Bohr, el radio de la \'orbita permitida para $n=2$ es:
+
+\begin{eqnarray}
+r_2=2^2a_0=4a_0 \nonumber 	
+\end{eqnarray}
+Los valores de los radios de Bohr corresponden a los valores mas probables, y deben estar dentro del rango establecido alrededor del valor esperado $\langle r\rangle \pm \Delta r$, veamos:
+
+\begin{eqnarray}
+\langle r\rangle \pm \Delta r=5a_0\pm \sqrt{5}a_0 \quad \therefore \quad \langle r\rangle \pm \Delta r=(5\pm \sqrt{5})a_0	\nonumber \\
+\left[(5-\sqrt{5})a_0,(5+\sqrt{5})a_0\right]=\left[2.764a_0,7.236a_0\right] \nonumber \\
+2.764a_0<4a_0<7.236a_0 \nonumber
+\end{eqnarray}
+Luego el valor que predice Bohr se encuentra dentro del rango establecido del valor esperado para \'este n\'umero cu\'antico.
+
+
+
+
+
+\hrulefill \\
+
+
+ \section{Cuantización del momento angular}
+ 
+ 
+	Para un estado excitado del átomo de hidrógeno.
+	\begin{enumerate}
+		\item Demuestre que el ángulo mínimo que puede formar el vector momento angular $\vec{L}$ con el eje $z$ es:
+		\begin{eqnarray}
+		(\theta_L)_{min}=\arccos\left(\frac{n-1}{\sqrt{n(n-1)}}\right)	\nonumber 
+		\end{eqnarray}
+		\item ?`Cuál es la ecuación correspondiente para $(\theta_L)_{max}$, el mayor ángulo posible entre $\vec{L}$ y el eje $z$?	
+	\end{enumerate}
+	
+%\end{multicols}
+
+\begin{center}
+	\textbf{\large \textbf{Soluci\'on}}		
+\end{center}
+El \'angulo $\theta_L$ es el que se forma entre el vector $\vec{L}$ y el eje $z$. Luego:
+
+\begin{eqnarray}
+\cos\theta_L=\frac{L_z}{L}	\quad \rightarrow \quad \theta_L=\arccos\left(\frac{L_z}{L}\right) \nonumber 
+\end{eqnarray}
+El \'angulo m\'as peque\~no $(\theta_L)_{min}$ se logra cuando $L_z$ tiende al valor de $L$, esto se obtiene con las siguientes condiciones:
+
+\begin{eqnarray}
+\ell=n-1 \quad &;& \quad m_\ell=\ell=n-1 \nonumber \\
+L=\sqrt{\ell(\ell+1)}\hbar=\sqrt{(n-1)n} \hbar \quad &;& \quad L_z=m_\ell\hbar=(n-1)\hbar \nonumber \\
+(\theta_L)_{min}=\arccos{\left(\frac{(n-1)\hbar}{\sqrt{(n-1)n} \hbar}\right)} \quad &\therefore& \quad (\theta_L)_{min}=\arccos{\left(\frac{(n-1)}{\sqrt{(n-1)n}}\right)} \nonumber \\
+(\theta_L)_{min}=\arccos{\left(\sqrt{\frac{n-1}{n}}\right)}  \quad &\therefore& \quad (\theta_L)_{min}=\arccos{\left(\sqrt{1-\frac{1}{n}}\right)} \nonumber
+\end{eqnarray}
+Obs\'ervese que $(\theta_L)_{min}$ se aproxima a $0^\circ$ cuando $n\rightarrow \infty$. 
+
+Para calcular el \'angulo m\'as grande $(\theta_L)_{max}$, se logra con las siguientes condiciones:
+
+\begin{eqnarray}
+\ell=n-1 \quad &;& \quad m_\ell=-\ell=-(n-1) \nonumber \\	
+L=\sqrt{\ell(\ell+1)}\hbar=\sqrt{(n-1)n} \hbar \quad &;& \quad L_z=m_\ell\hbar=-(n-1)\hbar \nonumber \\
+(\theta_L)_{max}=\arccos{\left(\frac{-(n-1)\hbar}{\sqrt{(n-1)n} \hbar}\right)} \quad &\therefore& \quad (\theta_L)_{max}=\arccos{\left(\frac{-(n-1)}{\sqrt{(n-1)n}}\right)} \nonumber \\
+(\theta_L)_{max}=\arccos{\left(-\sqrt{\frac{n-1}{n}}\right)} \quad &\therefore&  (\theta_L)_{max}=\arccos{\left(-\sqrt{1-\frac{1}{n}}\right)} \nonumber
+\end{eqnarray}
+Obs\'ervese que $(\theta_L)_{max}$ se aproxima a $180^\circ$ cuando $n\rightarrow \infty$.
+
+
+
+
+\hrulefill \\
+
+
+\begin{center}
+	\textbf{FORMULAS ÚTILES}
+\end{center}
+
+
+\begin{eqnarray}
+&:&\text{Condición de Normalización:} \quad 
+\int_0^{2\pi}\int_0^{\pi}\int _0^\infty\psi^*\psi r^2 dr \sin\theta d\theta d\phi = 1 \nonumber \\
+&:&\text{Valores esperados:} \quad
+\langle \mathcal{\hat{O}} \rangle= \int_0^{2\pi}\int_0^{\pi}\int _0^\infty \psi^* \hat{\mathcal{O}} \psi \;\underbrace{r^2 dr \sin\theta d\theta d\phi}_{dV} \nonumber \\
+&:&\text{Energias Permitidas:} \quad 
+E_n=-\frac{13.6}{n^2}~eV \nonumber \\
+&:&\text{Momento Angular:} \quad 
+L=\sqrt{\ell(\ell+1)}\hbar \quad
+L_z=m_\ell\hbar \quad \cos\theta=\frac{L_z}{L}\nonumber 
+\end{eqnarray}
+\begin{center}
+	\begin{tabular}{|c|c|c|}\hline
+		Número Cuántico & Símbolo & Posibles Valores \\ 
+		\hline
+		Principal & $n$ & 1,2,3,... \\
+		\hline
+		Orbital & $\ell$ & 0,1,2,...., n-1 \\
+		\hline
+		Magnético & $m_{\ell}$ & $0,\pm 1,\pm 2,....,\pm \ell$ \\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+\end{document}

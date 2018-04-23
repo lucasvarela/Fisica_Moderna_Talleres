@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{braket}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{calligra}
+\usepackage{algpseudocode} 
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scripty}[1]{\ensuremath{\mathcalligra{#1}}}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\textwidth}{490pt}
+\setlength{\topmargin}{-40pt}
+\addtolength{\hoffset}{-0.3cm}
+\addtolength{\textheight}{4cm}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\setlength{\parindent}{0cm}
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale = 0.42]{lcaoderecha}
+%	\caption{Eletr\'on ligado solo al núcleo derecho}
+%	\label{fig1}
+%	\end{figure}
+
+
+
+
+\begin{document}
+	%\tableofcontents
+	%\pagebreak
+\begin{center}
+	\Large \textbf{C.Física Moderna: Taller 10}\\
+	\normalsize \textbf{Introducción a la ecuación de Schrödinger 2}
+\end{center}
+
+
+	
+\section{Normalización y valores esperados en 1D}
+
+Se tiene la siguiente función de onda para un partícula:
+
+\begin{equation*}
+\psi(x,t) = A  \exp\left( -\frac{(x-x_0)^2}{4a^2} + \frac{ip_0 x}{\hbar} + i\omega_0 t    \right)
+\end{equation*}	
+	
+\begin{enumerate}
+	\item Calcule la constante de normalización $A$.
+	\item Calcule el valor esperado de la posición.
+	\item Calcule el valor esperado del momento.
+\end{enumerate}	
+\noindent\rule{16.5cm}{0.4pt}
+
+\section{Valor esperado en 3D}
+
+Una electrón está sujeto a la siguiente energía potencial:
+
+\begin{equation}
+V(\vec{r} ) = \frac{e^2}{r}
+\end{equation}
+
+Donde $ r = |\vec{r}|$. En su estado base el electrón tiene la siguiente función de onda definida sobre todo $\mathbb{R}^3$:
+
+\begin{equation*}
+\psi(\vec{r}) = \frac{1}{\sqrt{\pi a^3}} e^{-\frac{r}{a}}
+\end{equation*}
+
+Donde $a = \hbar^2/(m_e e^2)$. Calcule $\braket{V}$, el valor esperado de la energía potencial en el estado base.  
+
+\noindent\rule{16.5cm}{0.4pt}
+
+\section{Valor esperado del momento}
+
+Una partícula atrapada en un pozo de potencial infinito tiene la siguiente función de onda:
+
+\begin{equation}
+\psi(x) =\begin{cases}
+ \sqrt{\frac{2}{L}} \sin\left(\frac{2\pi x}{L}\right) & x\in[0,L]\\
+ \quad 0 & x\notin[0,L]
+\end{cases}
+\end{equation}
+
+
+\begin{enumerate}
+	\item Calcule $\Delta p$.
+	\item Calcule $\Delta x$.
+	\item Calcule $\Delta x\Delta p$. ¿Se cumple el principio de incertidumbre $\Delta x\Delta p \geq \hbar/2$?.
+\end{enumerate}
+
+\noindent\rule{16.5cm}{0.4pt}
+
+\pagebreak
+\begin{center}
+	\textbf{Fórmulas útiles}
+\end{center}
+
+
+\end{document}

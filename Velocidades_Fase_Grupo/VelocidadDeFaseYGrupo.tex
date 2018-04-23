@@ -1,0 +1,109 @@
+  \documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem, kantlipsum}
+\usepackage{graphicx}
+\setlength{\parindent}{0cm} 
+\newcommand{\e}{{\rm e}}
+\usepackage{hyperref}
+
+\begin{document}
+ 
+\begin{center}
+\Large \textbf{Velocidad de fase y de grupo}\\
+\end{center}
+ 
+
+\textbf{Velocidad de fase}\\
+
+La velocidad de fase y de grupo son dos formas diferentes de caracterizar que tan rápido se mueve una onda en el espacio. Una onda es esencialmente algún tipo de oscilación que se propaga en el espacio. Un ejemplo simple de una onda está dado por la onda sinusoidal:
+
+\begin{equation}
+f(x,t) = A \sin(kx-\omega t)
+\end{equation} 
+
+donde $A$ es la amplitud, $k =2\pi/\lambda$ el número de onda, $\lambda$ la longitud de onda y $\omega$ la frecuencia angular. Reescribamos la expresión anterior de la siguiente forma:
+\begin{equation}
+f(x,t) = A \sin \left( k \left[x-\frac{\omega}{k} t\right]   \right)
+\end{equation} 
+
+Si asumimos que $k,\omega>0$, se puede ver que a medida que pasa el tiempo la onda se mueve hacia la derecha. La cantidad $\omega/k$ tiene dimensión de velocidad y que precisamente da la velocidad con la que la onda se propaga hacia la derecha. Sigamos con otro ejemplo simple, la onda compleja exponencial:
+
+\begin{equation}
+f(x,t) = A \e^{i[kx-\omega t]}
+\end{equation}
+
+Debido a la fórmula de Euler, la parte imaginaria de la función se comporta como la onda sinusoidal del ejemplo anterior. La parte real se comporta como una onda coseno que comparte el mismo número de onda, frecuencia y velocidad de su parte imaginaria. Esta onda se introduce ya que es el punto de partida de ondas más complejas. Una forma bastante general de escribir una onda es como una combinación de ondas exponenciales (un paquete de ondas) con diferentes números de onda:
+
+\begin{equation}
+f(x,t) = \int_{\mathbb{R}} dk\;  A(k)\e^{i[kx-\omega(k) t]}
+\end{equation}
+ 
+donde $A(k)$ es una amplitud que depende del número de onda (una especie de peso para la contribución de la onda con número de onda $k$) . Note que $\omega \rightarrow \omega(k)$ también depende de $k$. La relación entre la frecuencia $\omega$ y el número de onda $k$ se conoce como relación de dispersión. Ahora, cada componente de la onda total viaja con una velocidad de fase $v_p$ (la p de "phase"):
+
+\begin{equation}
+v_p(k) = \frac{\omega(k)}{k}
+\end{equation}
+
+Que es la velocidad que encontramos en el primer ejemplo para una onda simple. Esta velocidad depende del número de onda de cada onda, por lo que diferentes componentes de la misma onda pueden viajar con velocidades diferentes. Por esto la onda compuesta se va dispersando a medida que pasa el tiempo. Es similar a la situación que se ve en fórmula 1. Algunos carros van más rápido que otros por lo que se van separando los rápidos de los lentos.\\
+\\
+
+\textbf{Velocidad de grupo}\\
+
+Ahora suponga que $A(k)$ es bastante angosta, es cero en todo $\mathbb{R}$ excepto en un vecindario pequeño cerca a algun número de onda $k_0$. O en su defecto asuma que tiene rápidamente a cero al alejarse de dicho valor. Expandiendo alrededor de dicho valor se tiene:
+
+\begin{equation}
+\omega(k) = \omega(k_0) + \left.\frac{d \omega(k)}{dk}\right|_{k=k_0} (k-k_0) + \frac{1}{2!}\left.\frac{d^2 \omega(k)}{dk^2}\right|_{k=k_0} (k-k_0)^2+\cdots
+\end{equation}
+
+Se usara  $\left.\frac{d \omega(k)}{dk}\right|_{k=k_0} =\frac{d \omega(k_0)}{dk}$. Tomando a primer orden se tiene:
+
+\begin{equation}
+\omega(k) \approx \omega(k_0) + \frac{d \omega(k_0)}{dk} (k-k_0) 
+\end{equation}
+
+Si se mete esta aproximación a la integral se obtiene:
+
+
+\begin{equation}
+f(x,t) \approx \int_{\mathbb{R}} dk\; A(k)  \exp\left(i \left[kx -   \omega(k_0)t -\frac{d \omega(k_0)}{dk}(k-k_0)t   \right]      \right)
+\end{equation}
+ 
+ Reorganizando la expresión anterior:
+ 
+ \begin{equation}
+ f(x,t) \approx \e^{i(k_0x-\omega(k_0)t)} \int_{\mathbb{R}} dk\; A(k)  \exp\left(i(k-k_0) \left[x - \frac{d \omega(k_0)}{dk} t   \right]      \right)
+ \end{equation}
+ 
+ 
+ La expresión que se obtiene tiene una onda dominante con velocidad de fase $\omega(k_0)/k_0$. Pero en la integral está lo que en verdad buscamos. La integral es una función de $x$ y $t$ que depende de la combinación $x - \frac{d \omega(k_0)}{dk} (k-k_0)t$. Por lo tanto el valor absoluto de la onda se puede escribir como una onda dada por:
+ 
+ \begin{equation}
+ |f(x,t)| \approx   g\left(x - \frac{d \omega(k_0)}{dk}t\right)
+ \end{equation}
+ 
+ donde $g$ es una función que representa una onda que se mueve con velocidad $\left.\frac{d \omega}{dk}\right|_{k=k_0}$. Por lo tanto vemos que para una onda $f(x,t)$, la derivada de la frecuencia angular respecto al número de onda da la velocidad que caracteriza el movimiento colectivo (como grupo) del paquete de ondas. Esto motiva la definición de velocidad de grupo $v_g(k)$:
+ 
+ \begin{equation}
+ v_g(k) = \frac{d\omega(k)}{dk} 
+ \end{equation}
+ 
+ La velocidad de fase corresponde a la velocidad de cada componente del paquete de ondas mientras que la velocidad de grupo da la velocidad con la que se mueve el paquete entero en conjunto. Se puede pensar como una especie de velocidad promedio de las ondas que componen la onda total. Nuevamente volviendo al ejemplo de fórmula 1, la velocidad de grupo sería la velocidad con la que se mueve aproximadamente el conjunto de todos los carros. Aunque algunos van más rápido que otros (velocidad de fase), al final todos llegan en manada. Algunas propiedades de la velocidad de grupo son:\\
+\\ 
+ \begin{center}
+ 	\textbf{Algunas propiedades de la relación de dispersión}
+ \end{center}
+\begin{enumerate}
+	\item Si $\omega(k)$ es directamente proporcional a $k$, $v_g = v_p$. 
+	\item Si $\omega(k)= ak + b$, la envolvente de la onda se mueve a la velocidad de grupo y los picos de la onda a la velocidad de fase.
+	\item Si $\omega(k)$ no es una función lineal de $k$, diferentes zonas del paquete de ondas se mueven a diferente velocidad lo que termina deformando la envolvente de la onda. 
+\end{enumerate}
+ 
+ 
+\textbf{Tomado de:} \url{https://www.quora.com/How-do-I-understand-group-and-phase-velocity}
+ 
+\end{document}

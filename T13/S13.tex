@@ -1,0 +1,312 @@
+\documentclass{article}
+\usepackage{braket}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+ \usepackage{multirow}
+\usepackage{calligra}
+\usepackage{algpseudocode} 
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scripty}[1]{\ensuremath{\mathcalligra{#1}}}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\textwidth}{490pt}
+\setlength{\topmargin}{-40pt}
+\addtolength{\hoffset}{-0.3cm}
+\addtolength{\textheight}{4cm}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\setlength{\parindent}{0cm}
+\newcommand{\e}{{\rm e}}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale = 0.42]{lcaoderecha}
+%	\caption{Eletrón ligado solo al núcleo derecho}
+%	\label{fig1}
+%	\end{figure}
+
+
+
+
+\begin{document}
+\begin{center}
+	\Large \textbf{C.Física Moderna: Taller 13}\\
+	\normalsize \textbf{Ecuación de Schr\"{o}dinger en 3D}
+\end{center}
+
+\section{Pozo de potencial infinito en 3D}
+
+
+Considere un pozo infinito $V(\boldsymbol{r})$ con profundidad infinita de lados $L_x ,L_y \text{ y } L_z$. 
+
+\begin{equation*}
+V(\boldsymbol{r}) = \begin{cases}
+0  & \text{si } \boldsymbol{r} \in [0,L_x]\times[0,L_y]\times [0,L_z]\\
+\infty & \text{de lo contrario} 
+\end{cases}
+\end{equation*}
+
+El objetivo de este ejercicio es encontrar los estados estacionarios para una partícula confinada en dicho pozo y sus energías permitidas. Planteé un ansatz para la solución de la ecuación de Schrödinger de la forma
+
+\begin{equation*}
+\Psi(\boldsymbol{r},t) = \psi(\boldsymbol{r}) \e^{-iEt/\hbar}
+\end{equation*}
+
+donde
+
+\begin{equation*}
+\psi(\boldsymbol{r}) = X(x)Y (y)Z(z)
+\end{equation*}
+
+\begin{enumerate}
+	\item Calcule $X(x),Y (y) \text{ y } Z(z)$.
+	\item Usando las condiciones de frontera apropiadas encuentre las energías propias del sistema.
+	\item Calcular la constante de normalización para los funciones de onda de los estados estacionarios.
+	\item Encuentre la condición que deben cumplir  $L_x ,L_y \text{ y } L_z$ para que las energías no sean degeneradas
+\end{enumerate}
+
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+1.1  Introduciendo la solución que nos dan en la ecuación de Schrödinger obtenemos la siguiente ecuación diferencial:
+
+\begin{equation}
+ -\frac{2m}{\hbar^2}\left(\frac{1}{X(x)}\frac{\partial^2 X(x)}{\partial x^2}+ \frac{1}{Y(y)}\frac{\partial^2 Y(y)}{\partial y^2} + \frac{1}{Z(z)}\frac{\partial^2 Z(z)}{\partial z^2}\right) = E
+\end{equation}
+Vemos entonces, que cada sumando de la ecuación depende de una coordenada diferente, la única forma de que
+esto se cumpla es que cada termino sea constante. Llamamos las 3 constantes $c_x ,c_y \text{ y } c_z$:
+
+
+\begin{align}
+-\frac{\hbar^2}{2mX(x)}\frac{\partial^2 X(x)}{\partial x^2} = c_x \\
+-\frac{\hbar^2}{2mY(y)}\frac{\partial^2 Y(y)}{\partial y^2} = c_y \\
+-\frac{\hbar^2}{2mZ(z)}\frac{\partial^2 Z(z)}{\partial z^2} = c_z
+\end{align}
+
+Donde tenemos la condición que:
+
+\begin{equation}
+c_x + c_y + c_z = E
+\end{equation}
+
+Tenemos el mismo tipo de ecuación diferencial ordinaria lineal, cuya solución es bien conocida:
+
+\begin{align}
+X(x) = X_0 \sin\left(k_x x + \phi_x\right)\\
+Y(y) = Y_0 \sin\left(k_y y + \phi_y\right)\\
+Z(z) = Z_0 \sin\left(k_z z + \phi_z\right)
+\end{align}
+
+Donde $X_0$ y $\phi_x$ son las constantes de integración(y para cada caso respectivamente). Las constantes $k_{\alpha}$ se definen como:
+
+\begin{equation}
+k_{\alpha} = \sqrt{\frac{2mc_{\alpha}}{\hbar^2}} \qquad \alpha = x,y,z
+\end{equation}
+
+1.2  Para encontrar las energías propias utilizamos las condiciones de frontera que nos dicen que la función se debe
+anular en los extremos de la caja para que la función de onda sea continua:
+
+\begin{align}
+X(0) = 0\\
+X(L_x)  =  0
+\end{align}
+
+De la primera condición se deduce que $\phi_x = 0$. De la segunda condición tenemos:
+
+\begin{align}
+X(L_x) &= X_0 \sin(k_x L_x)\\
+&=0
+\end{align}
+
+No podemos pedir que $X_0 = 0$ ya que esto nos daría una solución que no se puede normalizar. Por lo tanto se exige:
+
+\begin{equation}
+\sin(k_x L_x) = 0
+\end{equation}
+
+Por lo que se tiene:
+
+\begin{equation}
+k_x L_x = n_x \pi \qquad n_x = 1,2,3,\dots
+\end{equation}
+
+Recuerde que por convención se toma los números de onda positivos, por eso $n_x \in \mathbb{N}$ y no en $\mathbb{Z}$. El motivo
+por el cual no se incluye el valor $n_x = 0$ es que la solución $k_x = 0$ no es físicamente aceptable ya que no puede
+ser normalizada. Con el resultado anterior tenemos la siguiente expresión para $k_x$:
+
+\begin{equation}
+k_x = \frac{n_x \pi}{L_x}
+\end{equation}
+
+De forma análoga se obtiene para $y \text{ y } z$:
+
+\begin{align}
+k_y = \frac{n_y \pi}{L_y}\\
+k_z = \frac{n_z \pi}{L_z}
+\end{align}
+
+Ahora las constante $c_x,c_y \text{ y } c_z$ son:
+
+\begin{align}
+c_x = \frac{n_x^2 \pi^2 \hbar^2}{2 mL_x^2}\\
+c_y = \frac{n_y^2 \pi^2 \hbar^2}{2 mL_y^2}\\
+c_z = \frac{n_z^2 \pi^2 \hbar^2}{2 mL_z^2}
+\end{align}
+
+Y con ellas la energía es:
+
+\begin{equation}
+E(n_x,n_y,n_z) = \frac{ \pi^2 \hbar^2}{2 m}\left(\frac{n_x^2}{L_x^2}+\frac{n_y^2}{L_y^2}+\frac{n_z^2}{L_z^2}\right)
+\end{equation}
+
+
+1.3 La función de onda independiente del tiempo es:
+
+\begin{equation}
+\psi(\boldsymbol{r}) = X_0 Y_0 Z_0\sin\left(k_x x \right)\sin\left(k_y y \right)\sin\left(k_z z \right)
+\end{equation}
+ 
+ Y la condición de normalización es:
+ 
+ \begin{equation}
+ \int_{\mathbb{R}^3} d^3 r \;\psi(\boldsymbol{r}) \psi^*(\boldsymbol{r}) = 1 
+ \end{equation}
+ 
+ Como la función de onda se anula fuera de la caja se tiene:
+ 
+ \begin{equation}
+ \int_{\mathbb{R}^3} d^3 r\; \psi(\boldsymbol{r}) \psi^*(\boldsymbol{r}) = \int_{0}^{L_x}dx \int_{0}^{L_y}dy\int_{0}^{L_z}  dz (X_0 Y_0 Z_0)^2\sin^2\left(k_x x \right)\sin^2\left(k_y y \right)\sin^2\left(k_z z \right) 
+ \end{equation}
+
+Al hacer las integrales se obtiene:
+
+\begin{equation}
+(X_0 Y_0 Z_0)^2 \frac{L_x L_y L_z}{8}= 1  
+\end{equation}
+
+Por lo que la constante de normalización es:
+
+\begin{equation}
+X_0 Y_0 Z_0 = \sqrt{\frac{8}{L_x L_y L_z}}
+\end{equation}
+
+Y la función de onda
+
+
+\begin{equation}
+\psi_{n_x,n_y,n_z}(\boldsymbol{r}) =\sqrt{\frac{8}{L_x L_y L_z}}\sin\left(\frac{n_x \pi}{L_x} x \right)\sin\left(\frac{n_y \pi}{L_y} y \right)\sin\left(\frac{n_z \pi}{L_z} z \right)
+\end{equation}
+
+
+1.4  Para responder este inciso consideremos solo dos longitudes iguales. Supongamos que los pares $(n_{x_1},n_{y_1})$ y $(n_{x_2},n_{y_2})$ dan la misma energía. Entonces tenemos:
+
+\begin{equation}
+\frac{n_{x_1}^2}{L_{x}^2}+\frac{n_{y_1}^2}{L_{y}^2} = \frac{n_{x_2}^2}{L_{x}^2} + \frac{n_{y_2}^2}{L_{y}^2}
+\end{equation}
+
+
+Ninguna de las longitudes es cero, por lo que se puede escribir:
+
+\begin{equation}
+n_{x_1}^2L_{y}^2 + n_{y_1}^2 L_{x}^2 = n_{x_2}^2L_{y}^2 + n_{y_2}^2 L_{x}^2
+\end{equation}
+
+Despejando se obtiene:
+
+\begin{equation}
+(n_{x_1}^2-n_{x_2}^2)L_{y}^2 =  (n_{y_2}^2-n_{y_1}^2) L_{x}^2
+\end{equation}
+
+Se tienen dos casos a considerar. Primero consideremos si $n_{x_1} = n_{x_2}$ entonces $n_{y_1} = n_{y_2}$, lo cual implica que no hay degeneramiento. De igual forma si  $n_{y_1} = n_{y_2}$ entonces $n_{x_1} = n_{x_2}$. Por lo tanto ambos números deben ser diferentes y consideramos solo ese caso. Ahora que sabemos que  $n_{y_1} \neq n_{y_2}$ podemos dividir la ecuación anterior y obtenemos:
+
+
+\begin{equation}
+\frac{n_{x_1}^2-n_{x_2}^2}{n_{y_2}^2-n_{y_1}^2} =   \frac{L_{x}^2}{L_{y}^2}
+\end{equation}
+
+Note que el lado izquierda de la igualdad es la división de un número entero entre otro, por lo que es un número racional. Entonces se tiene que:
+
+\begin{equation}
+ \frac{L_{x}^2}{L_{y}^2}  \in \mathbb{Q}
+\end{equation}
+
+De la ecuación para las energías vemos que sólo si dos cuadrados de las longitudes son conmensurables se puede tener estados
+degenerados. Es decir que si algún par de los cuadrados de las longitudes son conmensurables, existe degeneramiento en alguna energía. Se dice que dos números son conmensurables cuando su razón es un número racional.
+
+\hrulefill 
+\section{Estado degenerados}
+
+
+Una partícula de masa $m$ se mueve en una caja tridimensional cuyas dimensiones son $L_x = L,L_y = 2L \text{ y } L_z = 2L$. 
+
+\begin{enumerate}
+	\item Encuentre	las primeras seis energías más bajas.
+	\item Diga cuales de esas energías son degeneradas.
+\end{enumerate}
+
+\begin{center}
+	\textbf{Solución}
+\end{center}
+
+2.1 Del ejercicio anterior tenemos las energías para el sistema son:
+
+\begin{equation}
+E(n_x,n_y,n_z) = \frac{ \pi^2 \hbar^2}{8 mL^2}\left(  4 n_x^2 + n_y^2 + n_z^2 \right)
+\end{equation}
+
+Se introduce la constante $E_0 = \frac{ \pi^2 \hbar^2}{8 mL^2}$.  Con ello:
+
+\begin{equation}
+E(n_x,n_y,n_z) = E_0\left(  4 n_x^2 + n_y^2 + n_z^2 \right)
+\end{equation}
+
+En la siguiente tabla se escriben las primeras 6 energías
+
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|cccc|l|}
+		\hline
+	$n_x$ 	& $n_y$ &$n_z$  &$E/E_0$    & Estado        \\
+		\hline
+	1	&   1    & 1      & 6 & Estado fundamental\\
+	\hline
+	1	&  2     &  1     & 9& \multirow{2}{*}{Primera energía excitada}\\
+	1	&  1    &    2   &  9&\\
+	\hline
+	1	&  2     &    2   & 12 & Segunda energía excitada\\
+	\hline
+	1	&  1    &      3 & 14  &\multirow{2}{*}{Tercera energía excitada}\\
+	1	&  3     &      1 & 14 &\\
+		\hline
+	\end{tabular}%
+	\label{tab:addlabel}%
+\end{table}%
+
+2.2 Vemos entonces que hay degeneramiento para la primera y tercer energía excitada.
+
+2.3 La primera energía excitada es la primera con degeneramiento. Las funciones de onda para los dos estados con energía $E = 9E_0$ son:
+
+\begin{align}
+\psi_{1,2,1}(\boldsymbol{r}) =\sqrt{\frac{2}{L^3}}\sin\left(\frac{\pi}{L} x \right)\sin\left(\frac{\pi}{L} y \right)\sin\left(\frac{\pi}{2L} z \right)\\
+\psi_{1,1,2}(\boldsymbol{r}) =\sqrt{\frac{2}{L^3}}\sin\left(\frac{\pi}{L} x \right)\sin\left(\frac{\pi}{2L} y \right)\sin\left(\frac{\pi}{L} z \right)
+\end{align}
+
+\hrulefill \\
+\begin{center}
+	\textbf{FORMULAS ÚTILES}
+\end{center}
+
+Ecuación de Schrödinger independiente del tiempo:
+
+\begin{equation*}
+-\frac{\hbar^2}{2m} \nabla^2 \psi(\boldsymbol{r}) + V(\boldsymbol{r}) \psi(\boldsymbol{r}) = E \psi(\boldsymbol{r})
+\end{equation*}
+\end{document}

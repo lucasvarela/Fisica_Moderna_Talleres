@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage{braket}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{calligra}
+\usepackage{algpseudocode} 
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scripty}[1]{\ensuremath{\mathcalligra{#1}}}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\textwidth}{490pt}
+\setlength{\topmargin}{-40pt}
+\addtolength{\hoffset}{-0.3cm}
+\addtolength{\textheight}{4cm}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\setlength{\parindent}{0cm}
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale = 0.42]{lcaoderecha}
+%	\caption{Eletrón ligado solo al núcleo derecho}
+%	\label{fig1}
+%	\end{figure}
+
+
+
+
+\begin{document}
+	%\tableofcontents
+	%\pagebreak
+\begin{center}
+	\Large \textbf{C.Física Moderna: Taller 12}\\
+	\normalsize \textbf{Momentum angular}
+\end{center}
+
+\section{Capa M del átomo de hidrógeno}
+
+Un electrón en un átomo de hidrógeno se encuentra en la capa M. 
+
+\begin{enumerate}
+	\item Determinar su energía y
+	el número de estados de esta configuración.
+	\item En cada caso calcular el ángulo que hace el
+	momemtum angular con el eje $z$ y realizar un diagrama con las direcciones permitidas.
+\end{enumerate}
+ 
+
+
+\hrulefill 
+
+ \section{Representación del operador momento angular}
+ 
+Obtenga el operador $\hat{L}_z$ en coordenadas rectangulares y luego en coordenadas esféricas.
+Asumiendo que el operador $\hat{L}_z$ cumple una ecuación de valore propios determinar las
+funciones propias correspondientes a este operador.
+	
+%\end{multicols}
+
+
+\hrulefill 
+
+\section{Transiciones del átomo de hidrógeno}
+
+Si las transiciones permitidas entre capas y subcapas en el átomo de hidrógeno cumplen la
+condición $\Delta \ell =\pm 1$, realizar un diagrama con los niveles y subniveles de energía y las
+transiciones permitidas entre los diferentes estados $n$ y $\ell$.
+
+\hrulefill 
+
+\section{Hidrógeno en presencia de un campo magnético}
+
+Un átomo de hidrógeno se introduce en un espacio donde existe un campo magnético $B$ en
+la dirección $z$. La energía se puede escribir de la forma $E=E_n +E_B$, donde $E_n$ es la energía
+del átomo en ausencia del campo magnético y clásicamente $E_B= (e/2m_e) \vec{L}\cdot\vec{B}$.
+
+\begin{enumerate}
+	\item Determine que
+	sucede con los niveles de energía correspondientes a las subcapas s,p,d.
+	\item Las reglas de
+	transición ahora son $\Delta m_{\ell} = 0, \pm 1$; ¿qué sucede con las líneas espectrales emitidas por el
+	átomo en presencia de un campo magnético? Realice una representación en niveles de
+	energía.
+\end{enumerate}
+
+
+\hrulefill \\
+\begin{center}
+	\textbf{FORMULAS ÚTILES}
+\end{center}
+
+
+\begin{eqnarray}
+&:&\text{Momento angular:} \quad 
+\hat{L}= \hat{r}\times \hat{p} \nonumber \\
+&:&\text{Coordenadas esféricas:} \quad 
+ x=r\sin\theta \cos \phi \quad y=r\sin\theta \sin \phi \quad z= r\cos\theta \nonumber \\
+&:&\text{Momento Angular:} \quad 
+L=\sqrt{\ell(\ell+1)}\hbar \quad
+L_z=m_\ell\hbar \quad \cos\theta=\frac{L_z}{L}\nonumber 
+\end{eqnarray}
+\begin{center}
+	\begin{tabular}{|c|c|c|}\hline
+		Número Cuántico & Símbolo & Posibles Valores \\ 
+		\hline
+		Principal & $n$ & 1,2,3,... \\
+		\hline
+		Orbital & $\ell$ & 0,1,2,...., n-1 \\
+		\hline
+		Magnético & $m_{\ell}$ & $0,\pm 1,\pm 2,....,\pm \ell$ \\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+\end{document}
